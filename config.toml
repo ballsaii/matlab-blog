@@ -1,0 +1,119 @@
+# Hugo variables
+#
+baseurl = "baseURL=github.com"
+languageCode = "en-us"
+title = "Bbeaw and binary"
+theme = "hugo-theme-bootstrap4-blog"
+# number of posts to show on home/category/tag pages (Default: 10)
+paginate = 5
+# number of words to use for summary on home/category/tag pages (Default: 70)
+summaryLength = 50
+# optionally override the site's footer with custom copyright text
+# copyright = "Except where otherwise noted, content on this site is licensed under a [Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/)."
+#googleAnalytics = "UA-123-45"
+#disqusShortname = "XYW"
+# pygmentsUseClasses = true
+# enableGitInfo = true 
+comments = true
+disqusShortname = "chaipattanasaisaard"
+
+[markup]
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = true
+    lineNumbersInTable = true
+    noClasses = true
+    style = "solarized-dark"
+    tabWidth = 4
+
+[permalinks]
+  posts = "/:title/"
+  page = "/:day/:month/:year/:title/"
+
+[menu]
+#[[menu.sidebar]]
+#  name = "bootstrap4-blog"
+#  url = "https://themes.gohugo.io/hugo-theme-bootstrap4-blog/"
+#
+#[[menu.sidebar]]
+#  name = "Hugo"
+#  url = "https://gohugo.io/"
+  [[menu.main]]
+    name = "getting started"
+    post = "<span class='alert'>New!</span>"
+    pre = "<i class='fa fa-road'></i>"
+    url = "/getting-started/"
+    weight = -100
+    
+[[menu.navbar]]
+  name = "About"
+  url = "/about"
+[[menu.navbar]]
+  name = "MATLAB"
+  url = "/posts/matlab"
+[[menu.navbar]]
+  name = "POSTS"
+  url = "/posts/"
+
+# Theme variables
+#
+[params]
+  # Site author
+  author = "chaipattana saisa-ard"
+
+  # Description/subtitle for homepage (can be Markdown)
+  description = "Tips and Tricks for MATLAB code"
+
+  # Show header (default: true)
+  #header_visible = true
+
+  # Format dates with Go's time formatting
+  date_format = "Mon Jan 02, 2006"
+
+  # verification string for Google Webmaster Tools
+  #google_verify_meta = "BAi57DROASu4b2mkVNA_EyUsobfA7Mq8BmSg7Rn-Zp9"
+
+  # verification string for Bing Webmaster Tools
+  #bing_verify_meta = "3DA353059F945D1AA256B1CD8A3DA847"
+
+  # verification string for Yandex Webmaster Tools
+  #yandex_verify_meta = "66b077430f35f04a"
+
+  # Optionally display a message about the site's use of cookies, which may be
+  # required for your site in the European Union. Set the parameter below to a
+  # page where the user can get more information about cookies, either on your
+  # site or externally, for example:
+  #cookie_consent_info_url = "/cookie-information/"
+  #cookie_consent_info_url = "http://cookiesandyou.com"
+
+  # show sharing icons on pages/posts (default: true)
+  sharingicons = false
+
+  # Display post summaries instead of content in list templates (default: true)
+  #truncate = true
+
+  # Disable the use of sub-resource integrity on CSS/JS assets (default: false)
+  # Useful if you're using a CDN or other host where you can't control cache headers
+  #disable_sri = false
+
+  [params.sidebar]
+    # Optional about block for sidebar (can be Markdown)
+  #  about = "A simple Hugo theme based on the [Bootstrap v4 blog example](http://v4-alpha.getbootstrap.com/examples/blog/)."
+
+    # How many posts to show on the sidebar (Default: 5)
+  num_recent_posts = 5
+
+# Default content language for Hugo 0.17's multilingual support (default is "en")
+# See: https://github.com/spf13/hugo/blob/master/docs/content/content/multilingual.md
+#DefaultContentLanguage = "en"
+
+# Languages to render
+# [languages.en]
+#[languages.bg]
+  # Bulgarian date format is dd.mm.yyyy
+  #date_format = "02.01.2006"
+
+# vim: ts=2 sw=2 et
