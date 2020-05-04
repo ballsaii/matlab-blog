@@ -7,15 +7,19 @@ theme = "hugo-theme-bootstrap4-blog"
 # number of posts to show on home/category/tag pages (Default: 10)
 paginate = 5
 # number of words to use for summary on home/category/tag pages (Default: 70)
-summaryLength = 50
+summaryLength = 30
 # optionally override the site's footer with custom copyright text
-# copyright = "Except where otherwise noted, content on this site is licensed under a [Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/)."
+copyright = "Except where otherwise noted, content on this site is licensed under a [Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/)."
 #googleAnalytics = "UA-123-45"
 #disqusShortname = "XYW"
 # pygmentsUseClasses = true
 # enableGitInfo = true 
 comments = true
 disqusShortname = "chaipattanasaisaard"
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
 
 [markup]
   [markup.highlight]
@@ -51,11 +55,9 @@ disqusShortname = "chaipattanasaisaard"
 [[menu.navbar]]
   name = "About"
   url = "/about"
+
 [[menu.navbar]]
-  name = "MATLAB"
-  url = "/posts/matlab"
-[[menu.navbar]]
-  name = "POSTS"
+  name = "Posts"
   url = "/posts/"
 
 # Theme variables
@@ -86,11 +88,11 @@ disqusShortname = "chaipattanasaisaard"
   # required for your site in the European Union. Set the parameter below to a
   # page where the user can get more information about cookies, either on your
   # site or externally, for example:
-  #cookie_consent_info_url = "/cookie-information/"
+  cookie_consent_info_url = "/cookie-information/"
   #cookie_consent_info_url = "http://cookiesandyou.com"
 
   # show sharing icons on pages/posts (default: true)
-  sharingicons = false
+  sharingicons = true
 
   # Display post summaries instead of content in list templates (default: true)
   #truncate = true

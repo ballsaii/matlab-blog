@@ -7,8 +7,10 @@ menu:
     parent: matlab
 next: /tutorials/github-pages-blog
 prev: /tutorials/automated-deployments
-title: Creating a New Theme
+title: matlab2
 weight: 10
+categories: [matlab]
+tags: [function]
 ---
 
 
