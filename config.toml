@@ -1,6 +1,6 @@
 # Hugo variables
 #
-baseurl = "baseURL=github.com"
+baseurl = ""
 languageCode = "en-us"
 title = "Bbeaw and binary"
 theme = "hugo-theme-bootstrap4-blog"
