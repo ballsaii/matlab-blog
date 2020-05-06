@@ -1,6 +1,5 @@
 # Hugo variables
 #
-baseurl = ""
 languageCode = "en-us"
 title = "Bbeaw and binary"
 theme = "hugo-theme-bootstrap4-blog"
