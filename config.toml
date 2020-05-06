@@ -13,7 +13,7 @@ copyright = "Except where otherwise noted, content on this site is licensed unde
 #googleAnalytics = "UA-123-45"
 #disqusShortname = "XYW"
 # pygmentsUseClasses = true
-# enableGitInfo = true 
+enableGitInfo = true 
 comments = true
 disqusShortname = "chaipattanasaisaard"
 
