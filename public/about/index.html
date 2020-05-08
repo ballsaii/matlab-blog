@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta property="og:title" content="Creating a New Theme" />
+<meta property="og:description" content="Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://beawbucket.s3-website-ap-southeast-1.amazonaws.com/about/" />
+<meta property="article:published_time" content="2014-09-28T00:00:00+00:00" />
+<meta property="article:modified_time" content="2020-05-04T20:06:44+07:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Creating a New Theme"/>
+<meta name="twitter:description" content="Introduction This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content."/>
+<meta name="generator" content="Hugo 0.70.0" />
+
+
+    
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Creating a New Theme",
+  "url": "http://beawbucket.s3-website-ap-southeast-1.amazonaws.com/about/",
+  "wordCount": "188",
+  "datePublished": "2014-09-28T00:00:00+00:00",
+  "dateModified": "2020-05-04T20:06:44+07:00",
+  "author": {
+    "@type": "Person",
+    "name": "bbeaw"
+  }
+}
+</script>
+
+
+
+    <link rel="canonical" href="http://beawbucket.s3-website-ap-southeast-1.amazonaws.com/about/">
+
+    <title>Creating a New Theme | Bbeaw and binary</title>
+
+    
+    <!-- combined, minified CSS -->
+    
+    <link href="http://beawbucket.s3-website-ap-southeast-1.amazonaws.com/css/style.6da5c906cc7a8fbb93f31cd2316c5dbe3f19ac4aa6bfb066f1243045b8f6061e.css" rel="stylesheet" integrity="sha256-baXJBsx6j7uT8xzSMWxdvj8ZrEqmv7Bm8SQwRbj2Bh4=" crossorigin="anonymous">
+    
+
+    <!-- minified Font Awesome for SVG icons -->
+    
+    <script defer src="http://beawbucket.s3-website-ap-southeast-1.amazonaws.com/js/fontawesome.min.f3d2a1f5980bab30ddd0d8cadbd496475309fc48e2b1d052c5c09e6facffcb0f.js" integrity="sha256-89Kh9ZgLqzDd0NjK29SWR1MJ/EjisdBSxcCeb6z/yw8=" crossorigin="anonymous"></script>
+
+    <!-- RSS 2.0 feed -->
+    
+
+    
+
+    
+
+  </head>
+
+  <body>
+
+    
+    <div class="blog-masthead">
+      <div class="container">
+        <nav class="nav blog-nav">
+          <a class="nav-link " href="http://beawbucket.s3-website-ap-southeast-1.amazonaws.com">Home</a>
+          
+          <a class="nav-link" href="/about/" title="">About</a>
+          
+          
+          <a class="nav-link" href="/posts/" title="">Posts</a>
+          
+        </nav>
+      </div>
+    </div>
+    
+
+    
+    
+    <header class="blog-header">
+      <div class="container">
+        <h1 class="blog-title" dir="auto"><a href="http://beawbucket.s3-website-ap-southeast-1.amazonaws.com" rel="home">Bbeaw and binary</a></h1>
+        <p class="lead blog-description" dir="auto">Tips and Tricks for MATLAB code</p>
+      </div>
+    </header>
+    
+    
+
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-8 blog-main">
+
+          
+
+
+<article class="blog-post">
+  <header>
+    <h2 class="blog-post-title" dir="auto"><a href="http://beawbucket.s3-website-ap-southeast-1.amazonaws.com/about/">Creating a New Theme</a></h2>
+    <p class="blog-post-meta"><time datetime="2014-09-28T00:00:00Z">Sun Sep 28, 2014</time> by bbeaw</p>
+  </header>
+  <h2 id="introduction">Introduction</h2>
+<p>This tutorial will show you how to create a simple theme in Hugo. I assume that you are familiar with HTML, the bash command line, and that you are comfortable using Markdown to format content. I&rsquo;ll explain how Hugo uses templates and how you can organize your templates to create a theme. I won&rsquo;t cover using CSS to style your theme.</p>
+<p>We&rsquo;ll start with creating a new site with a very basic template. Then we&rsquo;ll add in a few pages and posts. With small variations on that, you will be able to create many different types of web sites.</p>
+<p>In this tutorial, commands that you enter will start with the &ldquo;$&rdquo; prompt. The output will follow. Lines that start with &ldquo;#&rdquo; are comments that I&rsquo;ve added to explain a point. When I show updates to a file, the &ldquo;:wq&rdquo; on the last line means to save the file.</p>
+<p>Here&rsquo;s an example:</p>
+<div class="highlight"><div style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">6
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-MATLAB" data-lang="MATLAB">x = [<span style="color:#2aa198">1</span>:<span style="color:#2aa198">10</span>];
+<span style="color:#719e07">function</span> <span style="color:#268bd2">mtest</span>
+  <span style="color:#719e07">for</span> <span style="color:#b58900">i</span>=<span style="color:#2aa198">1</span>:<span style="color:#2aa198">10</span>
+  y(<span style="color:#b58900">i</span>) = x(<span style="color:#b58900">i</span>)<span style="color:#719e07">+</span><span style="color:#2aa198">1</span>;
+  <span style="color:#719e07">end</span>
+<span style="color:#719e07">end</span>
+</code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#495050">6
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="color:#93a1a1;background-color:#002b36;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">x = [1:10];
+function mtest
+  for i=1:10
+  y(i) = x(i)+1;
+  end
+end
+</code></pre></td></tr></table>
+</div>
+</div>
+
+  
+
+  
+  <hr>
+  <footer>
+
+  
+    <section>
+    <h4>Share</h4>
+    <nav class="nav sharing-icons">
+      <a class="nav-item" href="https://www.facebook.com/sharer/sharer.php?u=http%3a%2f%2fbeawbucket.s3-website-ap-southeast-1.amazonaws.com%2fabout%2f" title="Share on Facebook"><span class="fab fa-facebook-f fa-2x" aria-hidden="true"></span></a>
+      <a class="nav-item" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http%3a%2f%2fbeawbucket.s3-website-ap-southeast-1.amazonaws.com%2fabout%2f" title="Share on LinkedIn"><span class="fab fa-linkedin-in fa-2x" aria-hidden="true"></span></a>
+      <a class="nav-item" href="https://twitter.com/intent/tweet?url=http%3a%2f%2fbeawbucket.s3-website-ap-southeast-1.amazonaws.com%2fabout%2f&amp;text=Creating%20a%20New%20Theme" title="Tweet this"><span class="fab fa-twitter fa-2x"></span></a>
+    </nav>
+  </section>
+
+  
+
+  
+  <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "chaipattanasaisaard" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  
+  </footer>
+  
+
+</article> 
+
+
+
+        </div> <!-- /.blog-main -->
+
+        <aside class="col-sm-3 ml-auto blog-sidebar">
+  
+
+  
+        <section class="sidebar-module">
+    <h4>Recent Posts</h4>
+    <ol class="list-unstyled">
+
+
+<li><a href="/matlab2/">matlab2</a></li>
+
+<li><a href="/%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%83%E0%B8%8A%E0%B9%89-matlab/">การใช้ MATLAB</a></li>
+
+    </ol>
+  </section>
+
+  
+
+  
+</aside>
+
+
+      </div> <!-- /.row -->
+    </div> <!-- /.container -->
+    
+
+    
+    <footer class="blog-footer">
+      <p dir="auto">
+      
+      Except where otherwise noted, content on this site is licensed under a <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution 4.0 International license</a>.
+      
+      </p>
+      <p>
+      <a href="#">Back to top</a>
+      </p>
+    </footer>
+    
+
+  </body>
+
+</html>
