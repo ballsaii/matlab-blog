@@ -7,7 +7,7 @@ tags: [function]
 ---
 
 
-## MATLAB
+## MATLAB ทดสอบภาษาไทย
 
 ```MATLAB
 x = [1:10];
