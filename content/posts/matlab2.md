@@ -1,14 +1,7 @@
 ---
 author: "BBon"
 date: 2014-09-28
-linktitle: Creating a New Theme
-menu:
-  main:
-    parent: matlab
-next: /tutorials/github-pages-blog
-prev: /tutorials/automated-deployments
 title: matlab2
-weight: 10
 categories: [matlab]
 tags: [function]
 ---
