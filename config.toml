@@ -14,8 +14,8 @@ copyright = "Except where otherwise noted, content on this site is licensed unde
 #disqusShortname = "XYW"
 # pygmentsUseClasses = true
 enableGitInfo = true
-comments = true
-disqusShortname = "chaipattanasaisaard"
+comments = false
+# disqusShortname = "chaipattanasaisaard"
 
 [taxonomies]
   category = "categories"
