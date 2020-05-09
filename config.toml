@@ -1,6 +1,6 @@
 # Hugo variables
 #
-#baseURL= "http://beawbucket.s3-website-ap-southeast-1.amazonaws.com"
+baseURL= "https://bbeawblog.onrender.com/"
 languageCode = "en-us"
 title = "Bbeaw and binary"
 theme = "hugo-theme-bootstrap4-blog"
