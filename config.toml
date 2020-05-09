@@ -9,8 +9,9 @@ paginate = 5
 # number of words to use for summary on home/category/tag pages (Default: 70)
 summaryLength = 30
 # optionally override the site's footer with custom copyright text
-copyright = "Except where otherwise noted, content on this site is licensed under a [Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/)."
-#googleAnalytics = "UA-123-45"
+copyright = "Except where otherwise noted, content on this site is licensed under a [Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/).  <br />  Blog [Policy](https://www.termsfeed.com/live/63c43686-c465-4d13-bd81-24c77d342b85) "
+
+googleAnalytics = "G-F3ZPGCLPB1"
 #disqusShortname = "XYW"
 # pygmentsUseClasses = true
 enableGitInfo = true
@@ -98,8 +99,8 @@ comments = false
 
   [params.sidebar]
     # Optional about block for sidebar (can be Markdown)
-  #  about = "A simple Hugo theme based on the [Bootstrap v4 blog example](http://v4-alpha.getbootstrap.com/examples/blog/)."
-
+   # about = "A simple Hugo theme based on the [Bootstrap v4 blog example](http://v4-alpha.getbootstrap.com/examples/blog/)."
+   # policy = 
     # How many posts to show on the sidebar (Default: 5)
   num_recent_posts = 5
 
