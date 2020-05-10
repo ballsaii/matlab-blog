@@ -16,7 +16,6 @@ googleAnalytics = "G-F3ZPGCLPB1"
 # pygmentsUseClasses = true
 enableGitInfo = true
 comments = false
-# disqusShortname = "chaipattanasaisaard"
 
 [taxonomies]
   category = "categories"
@@ -29,10 +28,10 @@ comments = false
     hl_Lines = ""
     lineNoStart = 1
     lineNos = true
-    lineNumbersInTable = true
+    lineNumbersInTable = false
     noClasses = true
-    style = "solarized-dark"
-    tabWidth = 4
+    style = "paraiso-dark"
+    tabWidth = 1
 
 [permalinks]
   posts = "/:title/"
