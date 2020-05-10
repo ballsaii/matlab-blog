@@ -47,9 +47,9 @@ comments = false
 #  name = "Hugo"
 #  url = "https://gohugo.io/"
 
-[[menu.navbar]]
-  name = "About"
-  url = "/about/"
+#[[menu.navbar]]
+#  name = "About"
+#  url = "/about/"
 
 [[menu.navbar]]
   name = "Posts"
