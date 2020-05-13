@@ -17,9 +17,9 @@ draft: false
 
 เกริ่นมาซะยาว มาลองสร้าง programatic GUI ที่เอาไว้ส่งข้อความไปมาระหว่างหน้าต่าง 2 อัน step-by-step กันดีกว่า
 
-1. สร้างหน้าต่างพร้อมใส่กล่องรับข้อความกับปุ่มส่ง ขึ้นมา 2 ชุด
-> gui2gui.m
+1. สร้างหน้าต่างพร้อมใส่กล่องรับข้อความกับปุ่มส่งขึ้นมา 2 ชุด ใน
 
+`gui2gui.m`
 ```MATLAB
 % first window
 f1 = figure('Position',[100,100,400,400],'Units','pixel','Tag','GUI1');
@@ -31,8 +31,32 @@ text1 = uicontrol(f1,'style','edit',String,'','Units','pixel','Position',[100,30
 % second window
 f2 = figure('Position',[600,100,400,400],'Units','pixel','Tag','GUI2');
 % add a send button
-send1 = uicontrol(f1,'style','pushbutton',String,'send','Units','pixel','Position',[100,100,200,30]);
+send2 = uicontrol(f2,'style','pushbutton',String,'send','Units','pixel','Position',[100,100,200,30]);
 % add a text box
-text1 = uicontrol(f1,'style','edit',String,'','Units','pixel','Position',[100,300,200,30]);
-``` 
-2. สร้าง function ขึ้นมาอันนึงเพื่อส่งรับข้อความจากกล่องรับข้อความในหน้าต่างที่ 1 แล้วส่งไปยัง
+text2 = uicontrol(f2,'style','edit',String,'','Units','pixel','Position',[100,300,200,30]);
+```
+
+2. จากนั้นก็แอด Callback function ไปที่ object ในกรณีนี้คือปุ่ม send1 และปุ่ม send2 กล่าวคือ Callback function จะบอกว่าถ้าเกิดเหตุการณ์กับ object นี้แล้วให้ไปเรียก function ตัวไหน
+
+ปกติถ้าสร้าง object ควรจะเซ็ต Callback function มาให้เลย เพราะถ้ามาเซ็ตทีหลังเราจะมาไล่หา object ทีหลังซึ่งมันจะวุ่นวาย
+
+```MATLAB
+send1.Callback = @sendTextFX;
+send2.Callback = @sendTextFX;
+````
+
+function ที่เซ็ตให้ Callback จะต้องชัดเจนว่าเรียก function ไหน ปกติจะใช้ @ เพื่อบอกว่าอยู่ในไฟล์นี้
+(ปกติถ้าเรามีชื่อ function เหมือนกันมันจะมีลำดับการเรียกใช้งานอยู่ โดยจะเลือกจาก function ที่ใกล้ที่สุดก่อน เช่น nested function ก่อน local function  ก่อน function in the same folder ก่อน function ที่ add มาจาก path)
+
+สิ่งที่ส่งมาพร้อม Callback คือ object ที่ถูกกระทำ กับ handles ที่เก็บข้อมูล
+
+
+3. สร้าง function ขึ้นมาอันนึงเพื่อส่งรับข้อความจากกล่องรับข้อความในหน้าต่างที่ 1 แล้วส่งไปยัง
+
+```MATLAB
+function senTextFX(hObject,eventdata,handles)
+% find string from object defined by Tag
+
+get(h)
+end
+```
