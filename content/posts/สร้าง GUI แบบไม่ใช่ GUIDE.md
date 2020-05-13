@@ -1,6 +1,6 @@
 ---
 author: "BBeaw"
-date: 2020-05-10
+date: 2020-05-13
 title: สร้าง GUI แบบไม่ใช่ GUIDE
 categories: [matlab]
 tags: [function,GUI]
