@@ -35,7 +35,7 @@ beam(2).unitx = 'cm';
 ```
 
 ถ้าทำ operate แบบ loop ก็ใช้ structfun ตามที่ blog ก่อนเคยเกริ่นไว้ก่อนหน้านี้
-นอกจากนี้ มี function อื่นที่ใช้ร่วมกับ structure เพื่อดึงข้อมูล เช่น fieldaname เพื่อดึงว่ามี fieldname อะไรบ้าง setfield เป็นการ set ค่าให้ structure ของ field ที่กำหนด
+นอกจากนี้ มี function อื่นที่ใช้ร่วมกับ structure เพื่อดึงข้อมูล เช่น fieldname เพื่อดึงว่ามี fieldname อะไรบ้าง setfield เป็นการ set ค่าให้ structure ของ field ที่กำหนด
 
 นอกจากนี้ยังมี function อื่นๆที่เอาไว้ใช้งาน ถ้ามองในมุมมองของ object class fieldname ก็เปรียบเสมือนเป็น properties ของ obj class structure นั่นเอง
 
