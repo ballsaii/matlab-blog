@@ -4,7 +4,7 @@ date: 2020-05-13
 title: สร้าง GUI แบบไม่ใช่ GUIDE
 categories: [matlab]
 tags: [GUI,object_handle]
-draft: true
+draft: false
 ---
 
 ## สร้าง GUI แบบไม่ใช่ GUIDE
