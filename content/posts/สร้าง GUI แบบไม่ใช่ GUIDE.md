@@ -3,8 +3,8 @@ author: "BBeaw"
 date: 2020-05-13
 title: สร้าง GUI แบบไม่ใช่ GUIDE
 categories: [matlab]
-tags: [function,GUI]
-draft: true
+tags: [GUI,object_handle]
+draft: false
 ---
 
 ## สร้าง GUI แบบไม่ใช่ GUIDE
@@ -19,58 +19,119 @@ draft: true
 
 ---
 
-## 1. Create windows
-สร้างหน้าต่างพร้อมใส่กล่องรับข้อความกับปุ่มส่งขึ้นมา 2 ชุด โดยสร้างไฟล์ ชื่อ `gui2gui.m` 
+### 1. Create function
+สร้างหน้าต่างพร้อมใส่กล่องรับข้อความกับปุ่มส่งขึ้นมา 2 ชุด โดยสร้าง function ชื่อ `EP3_GUI.m` 
 ```MATLAB
+function EP3_GUI
 % first window
 f1 = figure('Position',[100,100,400,400],'Units','pixel','Tag','GUI1');
 % add a send button
-send1 = uicontrol(f1,'style','pushbutton',String,'send','Units','pixel','Position',[100,100,200,30]);
+send1 = uicontrol(f1,'style','pushbutton','String','send','Units','pixel','Position',[100,100,200,30]);
 % add a text box
-text1 = uicontrol(f1,'style','edit',String,'','Units','pixel','Position',[100,300,200,30]);
+text1 = uicontrol(f1,'style','edit','String','','Units','pixel','Position',[100,300,200,30]);
 
 % second window
 f2 = figure('Position',[600,100,400,400],'Units','pixel','Tag','GUI2');
 % add a send button
-send2 = uicontrol(f2,'style','pushbutton',String,'send','Units','pixel','Position',[100,100,200,30]);
+send2 = uicontrol(f2,'style','pushbutton','String','send','Units','pixel','Position',[100,100,200,30]);
 % add a text box
-text2 = uicontrol(f2,'style','edit',String,'','Units','pixel','Position',[100,300,200,30]);
+text2 = uicontrol(f2,'style','edit','String','','Units','pixel','Position',[100,300,200,30]);
 ```
 
-## 2. Bind to Callback_function
-จากนั้นก็แอด Callback function ไปที่ object ในกรณีนี้คือปุ่ม send1 และปุ่ม send2 กล่าวคือ Callback function จะบอกว่าถ้าเกิดเหตุการณ์กับ object นี้แล้วให้ไปเรียก function ตัวไหน
+### 2. Bind to Callback_function to handle function
 
-ปกติถ้าสร้าง object ควรจะเซ็ต Callback function มาให้เลย เพราะถ้ามาเซ็ตทีหลังเราจะมาไล่หา object ทีหลังซึ่งมันจะวุ่นวาย
+จากนั้นก็แอด Callback function ไปที่ object ในกรณีนี้คือปุ่ม `send1` และปุ่ม `send2` กล่าวคือ Callback function จะบอกว่าถ้าเกิดเหตุการณ์กับ object นี้แล้วให้ไปเรียก handle function ตัวไหน
+
+ปกติถ้าสร้าง object ควรจะเซ็ต Callback function มาให้เลยจะได้ไม่ลืม
 
 ```MATLAB
 send1.Callback = @sendTextFX1;
 send2.Callback = @sendTextFX2;
 ```
 
-function ที่เซ็ตให้ Callback จะต้องชัดเจนว่าเรียก function ไหน ปกติจะใช้ @ เพื่อบอกว่าอยู่ในไฟล์นี้
-(ปกติถ้าเรามีชื่อ function เหมือนกันมันจะมีลำดับการเรียกใช้งานอยู่ โดยจะเลือกจาก function ที่ใกล้ที่สุดก่อน เช่น nested function ก่อน local function  ก่อน function in the same folder ก่อน function ที่ add มาจาก path)
-
-สิ่งที่ส่งมาพร้อม Callback คือ object ที่ถูกกระทำ กับ handles ที่เก็บข้อมูล
+handle function ที่เซ็ตให้กับ Callback จะใช้สร้างโดย *@* ตามด้วยชื่อ function
+สิ่งที่ไปพร้อมกับ handle function คือ `hObject` ที่ถูกกระทำ กับ `handles` ที่เก็บข้อมูล 
 
 
-## 3. Code Callback_function
+### 3. Code Callback_function
+
 สร้าง function ขึ้นมาเพื่อส่งรับข้อความจากกล่องรับข้อความในหน้าต่างที่ 1 ไป หน้าต่าง 2 และในทางกลับกัน
 
 ```MATLAB
-function senTextFX1(hObject,eventdata,handles)
-% find string from object defined by Tag
-handles
-get(h)
-end
+function sendTextFX1(hObject,eventdata,handles)
+%(hObject,eventdata,handles) must be preserved due to handle function by @
+    % get value
+    str1 = get(text1,'String');
+    % send value
+    set(text2,'String',str1);
+    % store str1 in object in hOject which text1
+     guidata(hObject,str1);
+    end
 
-function senTextFX2(hObject,eventdata,handles)
-% find string from object defined by Tag
-handles
-get(h)
+    function sendTextFX2(hObject,eventdata,handles)
+    % get value
+    str2 = get(text2,'String');
+    % send value
+    set(text1,'String',str2);
+    % store str2 in object in hOject which is text2
+    guidata(hObject,str2);
+    % display data that stored in text1 in MATLAB command line
+    disp(guidata(text1))
+    end
 end
 ```
 
-## 4. Run script & test
-กด RUN เพื่อประมวลผล 
+### 4. Run script & test
+สรุป code
+
+```MATLAB
+
+function EP3_GUI
+%% funciton creates 2 windows for throwning a value
+
+% first window
+f1 = figure('Position',[100,100,400,400],'Units','pixel','Tag','GUI1','Toolbar','none','Menubar','none');
+% add a send button
+send1 = uicontrol(f1,'style','pushbutton','String','send','Units','pixel','Position',[100,100,200,30]);
+% add a text box
+text1 = uicontrol(f1,'style','edit','String','','Units','pixel','Position',[100,300,200,30]);
+
+% second window
+f2 = figure('Position',[600,100,400,400],'Units','pixel','Tag','GUI2','Toolbar','none','Menubar','none');
+% add a send button
+send2 = uicontrol(f2,'style','pushbutton','String','send','Units','pixel','Position',[100,100,200,30]);
+% add a text box
+text2 = uicontrol(f2,'style','edit','String','','Units','pixel','Position',[100,300,200,30]);
+
+% set Callback_function to handle function which created by adding @
+send1.Callback = @sendTextFX1;
+send2.Callback = @sendTextFX2;
+
+    function sendTextFX1(hObject,eventdata,handles)
+    %(hObject,eventdata,handles) must be preserved due to handle function by @
+        % get value
+        str1 = get(text1,'String');
+        % send value
+        set(text2,'String',str1);
+        % store str1 in object in hOject which text1
+        guidata(hObject,str1);
+    end
+
+    function sendTextFX2(hObject,eventdata,handles)
+        % get value
+        str2 = get(text2,'String');
+        % send value
+        set(text1,'String',str2);
+        % store str2 in object in hOject which is text2
+        guidata(hObject,str2);
+        % display data that stored in text1 in MATLAB command line
+        disp(guidata(text1))
+    end
+end
+```
+พิมพ์ EP3_GUI เพื่อเรียกใช้ function ใน MATLAB command line จะเห็นว่าเมื่อรันแล้วจะปรากฎหน้าต่างขึ้นมา 2 อัน พอพิมพ์กล่องข้อความหนึ่ง พอกด send ค่าในข้อความก็จะถูกส่งไปอีกกล่องข้อความนึง
+สังเกตุว่าเมื่อรัน function จะไม่เจอ variable แม้แต่ตัวเดียวใน workspace เนื่องจากเรารัน function ไม่ใช่ script  
+
+*ทดสอบด้วย MATLAB 2016b*
 
 
