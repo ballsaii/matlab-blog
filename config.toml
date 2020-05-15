@@ -39,17 +39,10 @@ comments = false
 
 #[menu]
 # Link
-#[[menu.sidebar]]
-#  name = "bootstrap4-blog"
-#  url = "https://themes.gohugo.io/hugo-theme-bootstrap4-blog/"
+[[menu.sidebar]]
+  name = "DisR"
+  url = "https://github.com/ballsaii/DisR"
 #
-#[[menu.sidebar]]
-#  name = "Hugo"
-#  url = "https://gohugo.io/"
-
-#[[menu.navbar]]
-#  name = "About"
-#  url = "/about/"
 
 [[menu.navbar]]
   name = "Posts"
@@ -98,8 +91,8 @@ comments = false
 
   [params.sidebar]
     # Optional about block for sidebar (can be Markdown)
-   # about = "A simple Hugo theme based on the [Bootstrap v4 blog example](http://v4-alpha.getbootstrap.com/examples/blog/)."
-   # policy = 
+  about = "Other side of beam physicist:>> a coding writer, MATLAB langauge pros, technologist, && color theme only solarized!!" 
+  photo = "![mypic](/profile_picture.jpg)"
     # How many posts to show on the sidebar (Default: 5)
   num_recent_posts = 5
 
