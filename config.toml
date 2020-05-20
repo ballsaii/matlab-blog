@@ -89,10 +89,10 @@ comments = false
   # Useful if you're using a CDN or other host where you can't control cache headers
   #disable_sri = false
 
- # [params.sidebar]
+  [params.sidebar]
     # Optional about block for sidebar (can be Markdown)
- # about = "Other side of beam physicist:>> a coding writer, MATLAB langauge pros, technologist, && color theme only solarized!!" 
- # photo = "![mypic](/profile_picture.jpg)"
+  about = "Other side of beam physicist:>> a coding writer, MATLAB langauge pros, technologist, && color theme only solarized!!" 
+  photo = "![mypic](/profile_picture.jpg)"
     # How many posts to show on the sidebar (Default: 5)
   num_recent_posts = 5
 
