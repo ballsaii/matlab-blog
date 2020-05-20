@@ -17,6 +17,8 @@ copyright = "Except where otherwise noted, content on this site is licensed unde
 enableGitInfo = true
 comments = false
 
+
+
 [taxonomies]
   category = "categories"
   tag = "tags"
@@ -45,8 +47,8 @@ comments = false
 #
 
 [[menu.navbar]]
-  name = "Posts"
-  url = "/posts/"
+  name = "MATLAB"
+  url = "/categories/matlab/"
 
 # Theme variables
 #
