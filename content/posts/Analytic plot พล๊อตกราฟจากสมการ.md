@@ -1,7 +1,7 @@
 ---
 author: "BBeaw"
 date: 2020-05-19
-publishDate: 2020-05-21
+publishDate: 2020-05-20
 title: Analytic plot สร้างกราฟแบบ analytic
 categories: [matlab]
 tags: [function,visualization]
