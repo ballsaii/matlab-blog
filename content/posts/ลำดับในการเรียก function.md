@@ -62,6 +62,6 @@ Dupli1 in current path
 ```
 หมายความว่า MATLAB จะเลือกใน *Current Folder* ก่อนใน added path
 
-สรุปง่ายๆ การเรียกใช้ function จะเป็นไปตามเอกสาร (function procedure order)[https://www.mathworks.com/help/matlab/matlab_prog/function-precedence-order.html] นี้ ทางดีที่สุดคือ พยายามไม่ใช่ชื่อช้ำกัน หรือ ถ้ามี function อะไรไม่รู้ที่ add อยู่ path หรือไม่แน่ใจว่าเราเลือกชื่อถูกตามที่ต้องการรึป่าว ให้เช็คด้วยคำสั่ง `which` ตามด้วยชื่อ function มันก็จะบอกว่า function ที่ใช้งานนี้อยู่ใน location ไหน
+สรุปง่ายๆ การเรียกใช้ function จะเป็นไปตามเอกสาร [function procedure order](https://www.mathworks.com/help/matlab/matlab_prog/function-precedence-order.html) นี้ ทางดีที่สุดคือ พยายามไม่ใช่ชื่อช้ำกัน หรือ ถ้ามี function อะไรไม่รู้ที่ add อยู่ path หรือไม่แน่ใจว่าเราเลือกชื่อถูกตามที่ต้องการรึป่าว ให้เช็คด้วยคำสั่ง `which` ตามด้วยชื่อ function มันก็จะบอกว่า function ที่ใช้งานนี้อยู่ใน location ไหน
 
 ---
