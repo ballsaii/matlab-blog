@@ -17,8 +17,6 @@ copyright = "Except where otherwise noted, content on this site is licensed unde
 enableGitInfo = true
 comments = false
 
-
-
 [taxonomies]
   category = "categories"
   tag = "tags"
@@ -26,7 +24,7 @@ comments = false
 [markup]
   [markup.highlight]
     codeFences = true
-    guessSyntax = false
+    guessSyntax = true
     hl_Lines = ""
     lineNoStart = 1
     lineNos = false
