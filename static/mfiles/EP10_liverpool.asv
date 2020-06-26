@@ -1,0 +1,18 @@
+clear; close all;
+a = imread('EP10_liverpool.jpg');
+quote = sprintf('We are the champions 2019/2020');
+% f = figure;
+% image(a)
+h= image(a);
+a = gca;
+f = gcf;
+a.DataAspectRatio = [1 1 1];
+[width,height,~] = size(h.CData);
+
+t = text(width/2,height-100,quote);
+t.FontSize = 15;
+t.Color = 'white';
+t.BackgroundColor = [0.5 0.5 0.5]
+t.HorizontalAlignment = 'center';
+
+export 
