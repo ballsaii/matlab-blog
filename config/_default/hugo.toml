@@ -3,9 +3,9 @@
 #baseURL= "https://bbeawblog.onrender.com/"
 languageCode = "en-us"
 title = "Bbeaw and binary"
-#remote_theme = "pages-themes/dinky@v0.2.0"
-#plugins = "jekyll-remote-theme" # add this line to the plugins list if you already have one
-theme = "hugo-theme-mini"
+remote_theme = "pages-themes/dinky@v0.2.0"
+plugins = "jekyll-remote-theme" # add this line to the plugins list if you already have one
+#theme = "hugo-theme-mini"
 # number of posts to show on home/category/tag pages (Default: 10)
 paginate = 5
 # number of words to use for summary on home/category/tag pages (Default: 70)
