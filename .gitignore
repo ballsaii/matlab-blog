@@ -2,4 +2,3 @@ hugo
 public/
 .DS_Store
 .gitmodules
-/themes/
