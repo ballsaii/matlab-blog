@@ -3,7 +3,7 @@
 #baseURL= "https://bbeawblog.onrender.com/"
 languageCode = "en-us"
 title = "Bbeaw and binary"
-theme = "hugo-theme-bootstrap4-blog"
+theme = "clarity"
 # number of posts to show on home/category/tag pages (Default: 10)
 paginate = 5
 # number of words to use for summary on home/category/tag pages (Default: 70)
