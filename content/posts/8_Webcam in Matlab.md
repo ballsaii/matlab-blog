@@ -96,4 +96,4 @@ image(b);
 
 ทดสอบๆ 
 
-![snapshot_me](/EP8_preview.jpg)
+![snapshot_me](/static/mfiles/EP8_preview.jpg)
