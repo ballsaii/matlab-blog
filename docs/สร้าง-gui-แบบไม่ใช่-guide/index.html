@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='สร้าง GUI แบบไม่ใช่ GUIDE สำหรับมือใหม่ อาจจะการเรียนรู้การสร้าง GUI matlab ผ่าน GUIDE ซึ่งเป็นวิธีที่ง่ายและสะดวกที่สุดในการออกแบบ layout GUI ด้วย component ต่างๆ มีอีกวิธีหนึ่งที่สามารถสร้าง GUI ได้เหมือนกันคือการใช้ function เพื่อให้สร้าง (วาด) component ต่างๆ ให้เป็น GUI ซึ่งในเอกสาร Help จะเรียกว่า Programmatic GUI'>
+<title>สร้าง GUI แบบไม่ใช่ GUIDE</title>
+
+<link rel='canonical' href='/%E0%B8%AA%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%87-gui-%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B9%83%E0%B8%8A%E0%B9%88-guide/'>
+
+<link rel="stylesheet" href="/scss/style.min.24ef1cc321916467896e8c70c10c0ad7b98c2a8df14298032fb637216e397f50.css"><meta property='og:title' content='สร้าง GUI แบบไม่ใช่ GUIDE'>
+<meta property='og:description' content='สร้าง GUI แบบไม่ใช่ GUIDE สำหรับมือใหม่ อาจจะการเรียนรู้การสร้าง GUI matlab ผ่าน GUIDE ซึ่งเป็นวิธีที่ง่ายและสะดวกที่สุดในการออกแบบ layout GUI ด้วย component ต่างๆ มีอีกวิธีหนึ่งที่สามารถสร้าง GUI ได้เหมือนกันคือการใช้ function เพื่อให้สร้าง (วาด) component ต่างๆ ให้เป็น GUI ซึ่งในเอกสาร Help จะเรียกว่า Programmatic GUI'>
+<meta property='og:url' content='/%E0%B8%AA%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%87-gui-%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B9%83%E0%B8%8A%E0%B9%88-guide/'>
+<meta property='og:site_name' content='Bbeaw and binary'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='GUI' /><meta property='article:tag' content='object_handle' /><meta property='article:published_time' content='2020-05-13T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2020-05-13T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="สร้าง GUI แบบไม่ใช่ GUIDE">
+<meta name="twitter:description" content="สร้าง GUI แบบไม่ใช่ GUIDE สำหรับมือใหม่ อาจจะการเรียนรู้การสร้าง GUI matlab ผ่าน GUIDE ซึ่งเป็นวิธีที่ง่ายและสะดวกที่สุดในการออกแบบ layout GUI ด้วย component ต่างๆ มีอีกวิธีหนึ่งที่สามารถสร้าง GUI ได้เหมือนกันคือการใช้ function เพื่อให้สร้าง (วาด) component ต่างๆ ให้เป็น GUI ซึ่งในเอกสาร Help จะเรียกว่า Programmatic GUI">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_huda2458f72ce188392d75c5d51cd8e24e_373_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Bbeaw and binary</a></h1>
+            <h2 class="site-description"></h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/matlab/" >
+                matlab
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/%E0%B8%AA%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%87-gui-%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B9%83%E0%B8%8A%E0%B9%88-guide/">สร้าง GUI แบบไม่ใช่ GUIDE</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">May 13, 2020</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    3 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="สราง-gui-แบบไมใช-guide">สร้าง GUI แบบไม่ใช่ GUIDE</h2>
+<p>สำหรับมือใหม่ อาจจะการเรียนรู้การสร้าง GUI matlab ผ่าน GUIDE ซึ่งเป็นวิธีที่ง่ายและสะดวกที่สุดในการออกแบบ layout GUI ด้วย component ต่างๆ มีอีกวิธีหนึ่งที่สามารถสร้าง GUI ได้เหมือนกันคือการใช้ function เพื่อให้สร้าง (วาด) component ต่างๆ ให้เป็น GUI ซึ่งในเอกสาร Help จะเรียกว่า Programmatic GUI</p>
+<p>อันที่จริงการสร้าง GUI แบบ programatic ไม่ได้แตกต่างการที่เรียกใช้คำสั่ง plot เท่าใดนัก ถ้าพูดลงในรายละเอียดก็คือเมื่อเราเรียกใช้คำสั่ง plot มันก็จะสร้าง object นึง ที่เรียกว่า figure ซึ่งเปรียบเสมือนหน้าต่าง จากนั้นก็สร้าง axes object เอาไว้เป็นแกนพล๊อต จากนั้นก็สร้าง line object (เส้นกราฟ) ลงบน axes ที่เป็น parent</p>
+<p>ถ้าเราเพิ่มเติม uicontrol object ที่มีสามารถตอบสนอง เช่น pushbutton ที่มี action คือ click หรือแม้กระทั่งส่วนที่เป็น uimenu เป็น uicontrol แบบหนึ่งแต่อาจจะมีการเรียก event ที่ต่างจาก uicontrol มาตรฐานนิดหน่อย ค่อยพูดถึงในภายหลัง ถ้าเพิ่ม uicontrol textedit เราก็จะได้กล่องรับ/ส่งข้อความ ทีนี้ที่เหลือก็จะเป็นหน้าที่ของ UI designer ที่ต้องออกแบบว่าควรจะออกแบบหน้าตา Interface อย่างไร</p>
+<p>เกริ่นมาซะยาว มาลองสร้าง programatic GUI ที่เอาไว้ส่งข้อความไปมาระหว่างหน้าต่าง 2 อัน step-by-step กันดีกว่า</p>
+<hr>
+<h3 id="1-create-function">1. Create function</h3>
+<p>สร้างหน้าต่างพร้อมใส่กล่องรับข้อความกับปุ่มส่งขึ้นมา 2 ชุด โดยสร้าง function ชื่อ <code>EP3_GUI.m</code></p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;"><code class="language-MATLAB" data-lang="MATLAB"><span style="display:flex;"><span><span style="color:#719e07">function</span> <span style="color:#268bd2">EP3_GUI</span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75">% first window</span>
+</span></span><span style="display:flex;"><span>f1 = figure(<span style="color:#2aa198">&#39;Position&#39;</span>,[<span style="color:#2aa198">100</span>,<span style="color:#2aa198">100</span>,<span style="color:#2aa198">400</span>,<span style="color:#2aa198">400</span>],<span style="color:#2aa198">&#39;Units&#39;</span>,<span style="color:#2aa198">&#39;pixel&#39;</span>,<span style="color:#2aa198">&#39;Tag&#39;</span>,<span style="color:#2aa198">&#39;GUI1&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#586e75">% add a send button</span>
+</span></span><span style="display:flex;"><span>send1 = uicontrol(f1,<span style="color:#2aa198">&#39;style&#39;</span>,<span style="color:#2aa198">&#39;pushbutton&#39;</span>,<span style="color:#2aa198">&#39;String&#39;</span>,<span style="color:#2aa198">&#39;send&#39;</span>,<span style="color:#2aa198">&#39;Units&#39;</span>,<span style="color:#2aa198">&#39;pixel&#39;</span>,<span style="color:#2aa198">&#39;Position&#39;</span>,[<span style="color:#2aa198">100</span>,<span style="color:#2aa198">100</span>,<span style="color:#2aa198">200</span>,<span style="color:#2aa198">30</span>]);
+</span></span><span style="display:flex;"><span><span style="color:#586e75">% add a text box</span>
+</span></span><span style="display:flex;"><span>text1 = uicontrol(f1,<span style="color:#2aa198">&#39;style&#39;</span>,<span style="color:#2aa198">&#39;edit&#39;</span>,<span style="color:#2aa198">&#39;String&#39;</span>,<span style="color:#2aa198">&#39;&#39;</span>,<span style="color:#2aa198">&#39;Units&#39;</span>,<span style="color:#2aa198">&#39;pixel&#39;</span>,<span style="color:#2aa198">&#39;Position&#39;</span>,[<span style="color:#2aa198">100</span>,<span style="color:#2aa198">300</span>,<span style="color:#2aa198">200</span>,<span style="color:#2aa198">30</span>]);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75">% second window</span>
+</span></span><span style="display:flex;"><span>f2 = figure(<span style="color:#2aa198">&#39;Position&#39;</span>,[<span style="color:#2aa198">600</span>,<span style="color:#2aa198">100</span>,<span style="color:#2aa198">400</span>,<span style="color:#2aa198">400</span>],<span style="color:#2aa198">&#39;Units&#39;</span>,<span style="color:#2aa198">&#39;pixel&#39;</span>,<span style="color:#2aa198">&#39;Tag&#39;</span>,<span style="color:#2aa198">&#39;GUI2&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#586e75">% add a send button</span>
+</span></span><span style="display:flex;"><span>send2 = uicontrol(f2,<span style="color:#2aa198">&#39;style&#39;</span>,<span style="color:#2aa198">&#39;pushbutton&#39;</span>,<span style="color:#2aa198">&#39;String&#39;</span>,<span style="color:#2aa198">&#39;send&#39;</span>,<span style="color:#2aa198">&#39;Units&#39;</span>,<span style="color:#2aa198">&#39;pixel&#39;</span>,<span style="color:#2aa198">&#39;Position&#39;</span>,[<span style="color:#2aa198">100</span>,<span style="color:#2aa198">100</span>,<span style="color:#2aa198">200</span>,<span style="color:#2aa198">30</span>]);
+</span></span><span style="display:flex;"><span><span style="color:#586e75">% add a text box</span>
+</span></span><span style="display:flex;"><span>text2 = uicontrol(f2,<span style="color:#2aa198">&#39;style&#39;</span>,<span style="color:#2aa198">&#39;edit&#39;</span>,<span style="color:#2aa198">&#39;String&#39;</span>,<span style="color:#2aa198">&#39;&#39;</span>,<span style="color:#2aa198">&#39;Units&#39;</span>,<span style="color:#2aa198">&#39;pixel&#39;</span>,<span style="color:#2aa198">&#39;Position&#39;</span>,[<span style="color:#2aa198">100</span>,<span style="color:#2aa198">300</span>,<span style="color:#2aa198">200</span>,<span style="color:#2aa198">30</span>]);
+</span></span></code></pre></div><h3 id="2-bind-to-callback_function-to-handle-function">2. Bind to Callback_function to handle function</h3>
+<p>จากนั้นก็แอด Callback function ไปที่ object ในกรณีนี้คือปุ่ม <code>send1</code> และปุ่ม <code>send2</code> กล่าวคือ Callback function จะบอกว่าถ้าเกิดเหตุการณ์กับ object นี้แล้วให้ไปเรียก handle function ตัวไหน</p>
+<p>ปกติถ้าสร้าง object ควรจะเซ็ต Callback function มาให้เลยจะได้ไม่ลืม</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;"><code class="language-MATLAB" data-lang="MATLAB"><span style="display:flex;"><span>send1.Callback = @sendTextFX1;
+</span></span><span style="display:flex;"><span>send2.Callback = @sendTextFX2;
+</span></span></code></pre></div><p>handle function ที่เซ็ตให้กับ Callback จะใช้สร้างโดย <em>@</em> ตามด้วยชื่อ function
+สิ่งที่ไปพร้อมกับ handle function คือ <code>hObject</code> ที่ถูกกระทำ กับ <code>handles</code> ที่เก็บข้อมูล</p>
+<h3 id="3-code-callback_function">3. Code Callback_function</h3>
+<p>สร้าง function ขึ้นมาเพื่อส่งรับข้อความจากกล่องรับข้อความในหน้าต่างที่ 1 ไป หน้าต่าง 2 และในทางกลับกัน</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;"><code class="language-MATLAB" data-lang="MATLAB"><span style="display:flex;"><span><span style="color:#719e07">function</span> <span style="color:#268bd2">sendTextFX1</span>(hObject,eventdata,handles)
+</span></span><span style="display:flex;"><span><span style="color:#586e75">%(hObject,eventdata,handles) must be preserved due to handle function by @</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#586e75">% get value</span>
+</span></span><span style="display:flex;"><span>    str1 = get(text1,<span style="color:#2aa198">&#39;String&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#586e75">% send value</span>
+</span></span><span style="display:flex;"><span>    set(text2,<span style="color:#2aa198">&#39;String&#39;</span>,str1);
+</span></span><span style="display:flex;"><span>    <span style="color:#586e75">% store str1 in object in hOject which text1</span>
+</span></span><span style="display:flex;"><span>     guidata(hObject,str1);
+</span></span><span style="display:flex;"><span>    <span style="color:#719e07">end</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#719e07">    function</span> <span style="color:#268bd2">sendTextFX2</span>(hObject,eventdata,handles)
+</span></span><span style="display:flex;"><span>    <span style="color:#586e75">% get value</span>
+</span></span><span style="display:flex;"><span>    str2 = get(text2,<span style="color:#2aa198">&#39;String&#39;</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#586e75">% send value</span>
+</span></span><span style="display:flex;"><span>    set(text1,<span style="color:#2aa198">&#39;String&#39;</span>,str2);
+</span></span><span style="display:flex;"><span>    <span style="color:#586e75">% store str2 in object in hOject which is text2</span>
+</span></span><span style="display:flex;"><span>    guidata(hObject,str2);
+</span></span><span style="display:flex;"><span>    <span style="color:#586e75">% display data that stored in text1 in MATLAB command line</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#b58900">disp</span>(guidata(text1))
+</span></span><span style="display:flex;"><span>    <span style="color:#719e07">end</span>
+</span></span><span style="display:flex;"><span><span style="color:#719e07">end</span>
+</span></span></code></pre></div><h3 id="4-run-script--test">4. Run script &amp; test</h3>
+<p>สรุป code</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;"><code class="language-MATLAB" data-lang="MATLAB"><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#719e07">function</span> <span style="color:#268bd2">EP3_GUI</span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75">%% funciton creates 2 windows for throwning a value</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75">% first window</span>
+</span></span><span style="display:flex;"><span>f1 = figure(<span style="color:#2aa198">&#39;Position&#39;</span>,[<span style="color:#2aa198">100</span>,<span style="color:#2aa198">100</span>,<span style="color:#2aa198">400</span>,<span style="color:#2aa198">400</span>],<span style="color:#2aa198">&#39;Units&#39;</span>,<span style="color:#2aa198">&#39;pixel&#39;</span>,<span style="color:#2aa198">&#39;Tag&#39;</span>,<span style="color:#2aa198">&#39;GUI1&#39;</span>,<span style="color:#2aa198">&#39;Toolbar&#39;</span>,<span style="color:#2aa198">&#39;none&#39;</span>,<span style="color:#2aa198">&#39;Menubar&#39;</span>,<span style="color:#2aa198">&#39;none&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#586e75">% add a send button</span>
+</span></span><span style="display:flex;"><span>send1 = uicontrol(f1,<span style="color:#2aa198">&#39;style&#39;</span>,<span style="color:#2aa198">&#39;pushbutton&#39;</span>,<span style="color:#2aa198">&#39;String&#39;</span>,<span style="color:#2aa198">&#39;send&#39;</span>,<span style="color:#2aa198">&#39;Units&#39;</span>,<span style="color:#2aa198">&#39;pixel&#39;</span>,<span style="color:#2aa198">&#39;Position&#39;</span>,[<span style="color:#2aa198">100</span>,<span style="color:#2aa198">100</span>,<span style="color:#2aa198">200</span>,<span style="color:#2aa198">30</span>]);
+</span></span><span style="display:flex;"><span><span style="color:#586e75">% add a text box</span>
+</span></span><span style="display:flex;"><span>text1 = uicontrol(f1,<span style="color:#2aa198">&#39;style&#39;</span>,<span style="color:#2aa198">&#39;edit&#39;</span>,<span style="color:#2aa198">&#39;String&#39;</span>,<span style="color:#2aa198">&#39;&#39;</span>,<span style="color:#2aa198">&#39;Units&#39;</span>,<span style="color:#2aa198">&#39;pixel&#39;</span>,<span style="color:#2aa198">&#39;Position&#39;</span>,[<span style="color:#2aa198">100</span>,<span style="color:#2aa198">300</span>,<span style="color:#2aa198">200</span>,<span style="color:#2aa198">30</span>]);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75">% second window</span>
+</span></span><span style="display:flex;"><span>f2 = figure(<span style="color:#2aa198">&#39;Position&#39;</span>,[<span style="color:#2aa198">600</span>,<span style="color:#2aa198">100</span>,<span style="color:#2aa198">400</span>,<span style="color:#2aa198">400</span>],<span style="color:#2aa198">&#39;Units&#39;</span>,<span style="color:#2aa198">&#39;pixel&#39;</span>,<span style="color:#2aa198">&#39;Tag&#39;</span>,<span style="color:#2aa198">&#39;GUI2&#39;</span>,<span style="color:#2aa198">&#39;Toolbar&#39;</span>,<span style="color:#2aa198">&#39;none&#39;</span>,<span style="color:#2aa198">&#39;Menubar&#39;</span>,<span style="color:#2aa198">&#39;none&#39;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#586e75">% add a send button</span>
+</span></span><span style="display:flex;"><span>send2 = uicontrol(f2,<span style="color:#2aa198">&#39;style&#39;</span>,<span style="color:#2aa198">&#39;pushbutton&#39;</span>,<span style="color:#2aa198">&#39;String&#39;</span>,<span style="color:#2aa198">&#39;send&#39;</span>,<span style="color:#2aa198">&#39;Units&#39;</span>,<span style="color:#2aa198">&#39;pixel&#39;</span>,<span style="color:#2aa198">&#39;Position&#39;</span>,[<span style="color:#2aa198">100</span>,<span style="color:#2aa198">100</span>,<span style="color:#2aa198">200</span>,<span style="color:#2aa198">30</span>]);
+</span></span><span style="display:flex;"><span><span style="color:#586e75">% add a text box</span>
+</span></span><span style="display:flex;"><span>text2 = uicontrol(f2,<span style="color:#2aa198">&#39;style&#39;</span>,<span style="color:#2aa198">&#39;edit&#39;</span>,<span style="color:#2aa198">&#39;String&#39;</span>,<span style="color:#2aa198">&#39;&#39;</span>,<span style="color:#2aa198">&#39;Units&#39;</span>,<span style="color:#2aa198">&#39;pixel&#39;</span>,<span style="color:#2aa198">&#39;Position&#39;</span>,[<span style="color:#2aa198">100</span>,<span style="color:#2aa198">300</span>,<span style="color:#2aa198">200</span>,<span style="color:#2aa198">30</span>]);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#586e75">% set Callback_function to handle function which created by adding @</span>
+</span></span><span style="display:flex;"><span>send1.Callback = @sendTextFX1;
+</span></span><span style="display:flex;"><span>send2.Callback = @sendTextFX2;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#719e07">    function</span> <span style="color:#268bd2">sendTextFX1</span>(hObject,eventdata,handles)
+</span></span><span style="display:flex;"><span>    <span style="color:#586e75">%(hObject,eventdata,handles) must be preserved due to handle function by @</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#586e75">% get value</span>
+</span></span><span style="display:flex;"><span>        str1 = get(text1,<span style="color:#2aa198">&#39;String&#39;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#586e75">% send value</span>
+</span></span><span style="display:flex;"><span>        set(text2,<span style="color:#2aa198">&#39;String&#39;</span>,str1);
+</span></span><span style="display:flex;"><span>        <span style="color:#586e75">% store str1 in object in hOject which text1</span>
+</span></span><span style="display:flex;"><span>        guidata(hObject,str1);
+</span></span><span style="display:flex;"><span>    <span style="color:#719e07">end</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#719e07">    function</span> <span style="color:#268bd2">sendTextFX2</span>(hObject,eventdata,handles)
+</span></span><span style="display:flex;"><span>        <span style="color:#586e75">% get value</span>
+</span></span><span style="display:flex;"><span>        str2 = get(text2,<span style="color:#2aa198">&#39;String&#39;</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#586e75">% send value</span>
+</span></span><span style="display:flex;"><span>        set(text1,<span style="color:#2aa198">&#39;String&#39;</span>,str2);
+</span></span><span style="display:flex;"><span>        <span style="color:#586e75">% store str2 in object in hOject which is text2</span>
+</span></span><span style="display:flex;"><span>        guidata(hObject,str2);
+</span></span><span style="display:flex;"><span>        <span style="color:#586e75">% display data that stored in text1 in MATLAB command line</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#b58900">disp</span>(guidata(text1))
+</span></span><span style="display:flex;"><span>    <span style="color:#719e07">end</span>
+</span></span><span style="display:flex;"><span><span style="color:#719e07">end</span>
+</span></span></code></pre></div><p>พิมพ์ EP3_GUI เพื่อเรียกใช้ function ใน MATLAB command line จะเห็นว่าเมื่อรันแล้วจะปรากฎหน้าต่างขึ้นมา 2 อัน พอพิมพ์กล่องข้อความหนึ่ง พอกด send ค่าในข้อความก็จะถูกส่งไปอีกกล่องข้อความนึง
+สังเกตุว่าเมื่อรัน function จะไม่เจอ variable แม้แต่ตัวเดียวใน workspace เนื่องจากเรารัน function ไม่ใช่ script</p>
+<p><em>ทดสอบด้วย MATLAB 2016b</em></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/gui/">GUI</a>
+        
+            <a href="/tags/object_handle/">object_handle</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2023 Except where otherwise noted, content on this site is licensed under a [Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/).  &lt;br /&gt;  Blog [Policy](https://www.termsfeed.com/live/63c43686-c465-4d13-bd81-24c77d342b85) 
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.20.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

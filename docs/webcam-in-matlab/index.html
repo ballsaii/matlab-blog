@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='เชื่อว่าหลายคนคงเริ่มคุ้นชินกับการ Video Conference จากการที่เรา social distancing กันภายใต้สถานการณ์ covid-19 อุปกรณ์ที่สำคัญในการ VC ก็คือ webcam ซึ่งบางคนก็มีพร้อมกับโน้ตบุ๊ค หรือ อาจจะซื้อมาติดตั้งในภายหลัง ยังไงก็แล้วแต่ วันนี้เราจะมา connect webcam เข้ากับ MATLAB ดูเพื่อดึงข้อมูลภาพ เอาละมาเริ่มกันเลย
+Connect webcam to PC เริ่มแรกต่อ webcam เข้ากับเครื่องให้เรียบร้อยแล้วจึงเปิด MATLAB จากนั้นก็พิมพ์ที่ command line (prompt) ว่า'>
+<title>Webcam in Matlab</title>
+
+<link rel='canonical' href='/webcam-in-matlab/'>
+
+<link rel="stylesheet" href="/scss/style.min.24ef1cc321916467896e8c70c10c0ad7b98c2a8df14298032fb637216e397f50.css"><meta property='og:title' content='Webcam in Matlab'>
+<meta property='og:description' content='เชื่อว่าหลายคนคงเริ่มคุ้นชินกับการ Video Conference จากการที่เรา social distancing กันภายใต้สถานการณ์ covid-19 อุปกรณ์ที่สำคัญในการ VC ก็คือ webcam ซึ่งบางคนก็มีพร้อมกับโน้ตบุ๊ค หรือ อาจจะซื้อมาติดตั้งในภายหลัง ยังไงก็แล้วแต่ วันนี้เราจะมา connect webcam เข้ากับ MATLAB ดูเพื่อดึงข้อมูลภาพ เอาละมาเริ่มกันเลย
+Connect webcam to PC เริ่มแรกต่อ webcam เข้ากับเครื่องให้เรียบร้อยแล้วจึงเปิด MATLAB จากนั้นก็พิมพ์ที่ command line (prompt) ว่า'>
+<meta property='og:url' content='/webcam-in-matlab/'>
+<meta property='og:site_name' content='Bbeaw and binary'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='webcam' /><meta property='article:tag' content='visualization' /><meta property='article:published_time' content='2020-06-12T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2023-09-25T17:19:29&#43;07:00'/>
+<meta name="twitter:title" content="Webcam in Matlab">
+<meta name="twitter:description" content="เชื่อว่าหลายคนคงเริ่มคุ้นชินกับการ Video Conference จากการที่เรา social distancing กันภายใต้สถานการณ์ covid-19 อุปกรณ์ที่สำคัญในการ VC ก็คือ webcam ซึ่งบางคนก็มีพร้อมกับโน้ตบุ๊ค หรือ อาจจะซื้อมาติดตั้งในภายหลัง ยังไงก็แล้วแต่ วันนี้เราจะมา connect webcam เข้ากับ MATLAB ดูเพื่อดึงข้อมูลภาพ เอาละมาเริ่มกันเลย
+Connect webcam to PC เริ่มแรกต่อ webcam เข้ากับเครื่องให้เรียบร้อยแล้วจึงเปิด MATLAB จากนั้นก็พิมพ์ที่ command line (prompt) ว่า">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_huda2458f72ce188392d75c5d51cd8e24e_373_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Bbeaw and binary</a></h1>
+            <h2 class="site-description"></h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/matlab/" >
+                matlab
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/webcam-in-matlab/">Webcam in Matlab</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Jun 12, 2020</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    2 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>เชื่อว่าหลายคนคงเริ่มคุ้นชินกับการ Video Conference จากการที่เรา social distancing กันภายใต้สถานการณ์ covid-19 อุปกรณ์ที่สำคัญในการ VC ก็คือ webcam ซึ่งบางคนก็มีพร้อมกับโน้ตบุ๊ค หรือ อาจจะซื้อมาติดตั้งในภายหลัง ยังไงก็แล้วแต่ วันนี้เราจะมา <em>connect</em> webcam เข้ากับ MATLAB ดูเพื่อดึงข้อมูลภาพ เอาละมาเริ่มกันเลย</p>
+<h2 id="connect-webcam-to-pc">Connect webcam to PC</h2>
+<p>เริ่มแรกต่อ webcam เข้ากับเครื่องให้เรียบร้อยแล้วจึงเปิด MATLAB จากนั้นก็พิมพ์ที่ command line (prompt) ว่า</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;"><code class="language-MATLAB" data-lang="MATLAB"><span style="display:flex;"><span><span style="color:#719e07">&gt;&gt;</span> webcamlist
+</span></span><span style="display:flex;"><span><span style="color:#b58900">ans</span> =
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  cell
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#2aa198">&#39;HD Pro Webcam C920&#39;</span>
+</span></span></code></pre></div><p>เพื่อแสดงรายการ webcam ที่ต่ออยู่กับเครื่อง ที่เครื่องนี้ของผู้เขียนใช้ของ logitech C920 มันก็มีแค่ 1 รายการ</p>
+<h1 id="get-webcam-object">get webcam object</h1>
+<p>จากนั้นทำการ get ตัว webcam มาไว้ใน workspace ด้วย function</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;"><code class="language-MATLAB" data-lang="MATLAB"><span style="display:flex;"><span>a = webcam;
+</span></span></code></pre></div><p>พอดีต่อแค่ตัวเดียวมันเลยรู้ว่าหมายถึงตัวไหน เราก็จะได้ object ชื่อ a ที่อยู่คลาส <code>webcam</code></p>
+<h1 id="webcam-properties">Webcam properties</h1>
+<p>ที่นี้เวลาเราจะเรียก method หรือ properties ของ a ง่าย สมมุติว่าเราจะดูว่า resolution ที่ใช้ปัจจุบันคืออะไร ก็พิมพ์ว่า</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;"><code class="language-MATLAB" data-lang="MATLAB"><span style="display:flex;"><span><span style="color:#719e07">&gt;&gt;</span> a.Resolution
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#b58900">ans</span> =
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#2aa198">640</span>x480
+</span></span></code></pre></div><p>แสดงว่า ณ ปัจจุบัน webcam ตัวนี้ใช้ที่ 640 x 480 pixel
+ถ้าอยากจะเปลี่ยน resolution ก็ทำได้ แต่จะดูว่ากล้องมี resolution อะไรบ้างก็ใช้</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;"><code class="language-MATLAB" data-lang="MATLAB"><span style="display:flex;"><span><span style="color:#719e07">&gt;&gt;</span> a.AvailableResolutions
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#b58900">ans</span> =
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#2aa198">1</span>×<span style="color:#2aa198">19</span> cell array
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  Columns <span style="color:#2aa198">1</span> through <span style="color:#2aa198">6</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#2aa198">&#39;640x480&#39;</span>    <span style="color:#2aa198">&#39;160x90&#39;</span>    <span style="color:#2aa198">&#39;160x120&#39;</span>    <span style="color:#2aa198">&#39;176x144&#39;</span>    <span style="color:#2aa198">&#39;320x180&#39;</span>    <span style="color:#2aa198">&#39;320x240&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  Columns <span style="color:#2aa198">7</span> through <span style="color:#2aa198">12</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#2aa198">&#39;352x288&#39;</span>    <span style="color:#2aa198">&#39;432x240&#39;</span>    <span style="color:#2aa198">&#39;640x360&#39;</span>    <span style="color:#2aa198">&#39;800x448&#39;</span>    <span style="color:#2aa198">&#39;800x600&#39;</span>    <span style="color:#2aa198">&#39;864x480&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  Columns <span style="color:#2aa198">13</span> through <span style="color:#2aa198">18</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#2aa198">&#39;960x720&#39;</span>    <span style="color:#2aa198">&#39;1024x576&#39;</span>    <span style="color:#2aa198">&#39;1280x720&#39;</span>    <span style="color:#2aa198">&#39;1600x896&#39;</span>    <span style="color:#2aa198">&#39;1920x1080&#39;</span>    <span style="color:#2aa198">&#39;2304x1296&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  Column <span style="color:#2aa198">19</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#2aa198">&#39;2304x1536&#39;</span>
+</span></span></code></pre></div><p>จากนั้นเปลี่ยน resolution สมมุติว่าเปลี่ยนเป็น 1024 x 576 ก็พิมพ์ว่า</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;"><code class="language-MATLAB" data-lang="MATLAB"><span style="display:flex;"><span>a.Resolution = <span style="color:#2aa198">&#39;1024x576&#39;</span>
+</span></span></code></pre></div><p>จริงๆ มี properties อีกเช่น  Brightness, WhiteBalance, Focus &hellip; ตาม<a class="link" href="https://www.mathworks.com/help/supportpkg/usbwebcams/ug/set-properties-for-webcam-acquisition.html"  target="_blank" rel="noopener"
+    >เอกสารนี้</a></p>
+<h2 id="preview-webcam">Preview webcam</h2>
+<p>จะ preview ภาพ</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;"><code class="language-MATLAB" data-lang="MATLAB"><span style="display:flex;"><span>a.preview
+</span></span></code></pre></div><p>มันก็จะแสดงหน้าต่างวิดีโอขึ้นมา เหมือนเรา preview ผ่านโปรแกรมของ webcam เพียงแต่อันนี้มันขึ้นบน MATLAB จากนั้น
+ถ้าอยากจะ snap ภาพ ณ ขณะนั้นก็ใช้</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;"><code class="language-MATLAB" data-lang="MATLAB"><span style="display:flex;"><span>b = a.snapshot;
+</span></span></code></pre></div><p>เราก็สามารถ snap ภาพโดยข้อมูลก็มี dimension ตาม resolution (height x width x 3) 3 ในตัวหลังน่าจะหมายถึง จำนวน layer ของ RGB</p>
+<h2 id="show-snapshot">Show snapshot</h2>
+<p>พอเราได้ข้อมูลภาพแล้ว แน่นอนถ้าเปิดดูตรงๆ มันก็จะเป็นตัวเลข (0-255) ซึ่งเหมาะกับการทำ Imagine processing (อย่างนัก อิอิ) เราสามารถใช้ <code>image</code> เพื่อแสดงให้เป็นภาพออกได้</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;"><code class="language-MATLAB" data-lang="MATLAB"><span style="display:flex;"><span>image(b);
+</span></span></code></pre></div><h2 id="test">Test</h2>
+<p>ทดสอบๆ</p>
+<p><img src="/mfiles/EP8_preview.jpg"
+	
+	
+	
+	loading="lazy"
+	
+		alt="snapshot_me"
+	
+	
+></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/webcam/">webcam</a>
+        
+            <a href="/tags/visualization/">visualization</a>
+        
+    </section>
+
+
+    <section class="article-lastmod">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+        <span>
+            Last updated on Sep 25, 2023 17:19 &#43;07
+        </span>
+    </section></footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/analytic-plot-%E0%B8%AA%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%87%E0%B8%81%E0%B8%A3%E0%B8%B2%E0%B8%9F%E0%B9%81%E0%B8%9A%E0%B8%9A-analytic/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Analytic plot สร้างกราฟแบบ analytic</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2023 Except where otherwise noted, content on this site is licensed under a [Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/).  &lt;br /&gt;  Blog [Policy](https://www.termsfeed.com/live/63c43686-c465-4d13-bd81-24c77d342b85) 
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.20.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>visualization on Bbeaw and binary</title>
+        <link>/tags/visualization/</link>
+        <description>Recent content in visualization on Bbeaw and binary</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <copyright>Except where otherwise noted, content on this site is licensed under a [Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/).  &lt;br /&gt;  Blog [Policy](https://www.termsfeed.com/live/63c43686-c465-4d13-bd81-24c77d342b85) </copyright>
+        <lastBuildDate>Fri, 12 Jun 2020 00:00:00 +0000</lastBuildDate><atom:link href="/tags/visualization/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Webcam in Matlab</title>
+        <link>/webcam-in-matlab/</link>
+        <pubDate>Fri, 12 Jun 2020 00:00:00 +0000</pubDate>
+        
+        <guid>/webcam-in-matlab/</guid>
+        <description>&lt;p&gt;เชื่อว่าหลายคนคงเริ่มคุ้นชินกับการ Video Conference จากการที่เรา social distancing กันภายใต้สถานการณ์ covid-19 อุปกรณ์ที่สำคัญในการ VC ก็คือ webcam ซึ่งบางคนก็มีพร้อมกับโน้ตบุ๊ค หรือ อาจจะซื้อมาติดตั้งในภายหลัง ยังไงก็แล้วแต่ วันนี้เราจะมา &lt;em&gt;connect&lt;/em&gt; webcam เข้ากับ MATLAB ดูเพื่อดึงข้อมูลภาพ เอาละมาเริ่มกันเลย&lt;/p&gt;
+&lt;h2 id=&#34;connect-webcam-to-pc&#34;&gt;Connect webcam to PC&lt;/h2&gt;
+&lt;p&gt;เริ่มแรกต่อ webcam เข้ากับเครื่องให้เรียบร้อยแล้วจึงเปิด MATLAB จากนั้นก็พิมพ์ที่ command line (prompt) ว่า&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt; webcamlist
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#b58900&#34;&gt;ans&lt;/span&gt; =
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  cell
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;HD Pro Webcam C920&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;เพื่อแสดงรายการ webcam ที่ต่ออยู่กับเครื่อง ที่เครื่องนี้ของผู้เขียนใช้ของ logitech C920 มันก็มีแค่ 1 รายการ&lt;/p&gt;
+&lt;h1 id=&#34;get-webcam-object&#34;&gt;get webcam object&lt;/h1&gt;
+&lt;p&gt;จากนั้นทำการ get ตัว webcam มาไว้ใน workspace ด้วย function&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;a = webcam;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;พอดีต่อแค่ตัวเดียวมันเลยรู้ว่าหมายถึงตัวไหน เราก็จะได้ object ชื่อ a ที่อยู่คลาส &lt;code&gt;webcam&lt;/code&gt;&lt;/p&gt;
+&lt;h1 id=&#34;webcam-properties&#34;&gt;Webcam properties&lt;/h1&gt;
+&lt;p&gt;ที่นี้เวลาเราจะเรียก method หรือ properties ของ a ง่าย สมมุติว่าเราจะดูว่า resolution ที่ใช้ปัจจุบันคืออะไร ก็พิมพ์ว่า&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt; a.Resolution
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#b58900&#34;&gt;ans&lt;/span&gt; =
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;640&lt;/span&gt;x480
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;แสดงว่า ณ ปัจจุบัน webcam ตัวนี้ใช้ที่ 640 x 480 pixel
+ถ้าอยากจะเปลี่ยน resolution ก็ทำได้ แต่จะดูว่ากล้องมี resolution อะไรบ้างก็ใช้&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt; a.AvailableResolutions
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#b58900&#34;&gt;ans&lt;/span&gt; =
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#2aa198&#34;&gt;1&lt;/span&gt;×&lt;span style=&#34;color:#2aa198&#34;&gt;19&lt;/span&gt; cell array
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  Columns &lt;span style=&#34;color:#2aa198&#34;&gt;1&lt;/span&gt; through &lt;span style=&#34;color:#2aa198&#34;&gt;6&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;640x480&amp;#39;&lt;/span&gt;    &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;160x90&amp;#39;&lt;/span&gt;    &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;160x120&amp;#39;&lt;/span&gt;    &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;176x144&amp;#39;&lt;/span&gt;    &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;320x180&amp;#39;&lt;/span&gt;    &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;320x240&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  Columns &lt;span style=&#34;color:#2aa198&#34;&gt;7&lt;/span&gt; through &lt;span style=&#34;color:#2aa198&#34;&gt;12&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;352x288&amp;#39;&lt;/span&gt;    &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;432x240&amp;#39;&lt;/span&gt;    &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;640x360&amp;#39;&lt;/span&gt;    &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;800x448&amp;#39;&lt;/span&gt;    &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;800x600&amp;#39;&lt;/span&gt;    &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;864x480&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  Columns &lt;span style=&#34;color:#2aa198&#34;&gt;13&lt;/span&gt; through &lt;span style=&#34;color:#2aa198&#34;&gt;18&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;960x720&amp;#39;&lt;/span&gt;    &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;1024x576&amp;#39;&lt;/span&gt;    &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;1280x720&amp;#39;&lt;/span&gt;    &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;1600x896&amp;#39;&lt;/span&gt;    &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;1920x1080&amp;#39;&lt;/span&gt;    &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;2304x1296&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  Column &lt;span style=&#34;color:#2aa198&#34;&gt;19&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;2304x1536&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;จากนั้นเปลี่ยน resolution สมมุติว่าเปลี่ยนเป็น 1024 x 576 ก็พิมพ์ว่า&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;a.Resolution = &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;1024x576&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;จริงๆ มี properties อีกเช่น  Brightness, WhiteBalance, Focus &amp;hellip; ตาม&lt;a class=&#34;link&#34; href=&#34;https://www.mathworks.com/help/supportpkg/usbwebcams/ug/set-properties-for-webcam-acquisition.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;เอกสารนี้&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;preview-webcam&#34;&gt;Preview webcam&lt;/h2&gt;
+&lt;p&gt;จะ preview ภาพ&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;a.preview
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;มันก็จะแสดงหน้าต่างวิดีโอขึ้นมา เหมือนเรา preview ผ่านโปรแกรมของ webcam เพียงแต่อันนี้มันขึ้นบน MATLAB จากนั้น
+ถ้าอยากจะ snap ภาพ ณ ขณะนั้นก็ใช้&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;b = a.snapshot;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;เราก็สามารถ snap ภาพโดยข้อมูลก็มี dimension ตาม resolution (height x width x 3) 3 ในตัวหลังน่าจะหมายถึง จำนวน layer ของ RGB&lt;/p&gt;
+&lt;h2 id=&#34;show-snapshot&#34;&gt;Show snapshot&lt;/h2&gt;
+&lt;p&gt;พอเราได้ข้อมูลภาพแล้ว แน่นอนถ้าเปิดดูตรงๆ มันก็จะเป็นตัวเลข (0-255) ซึ่งเหมาะกับการทำ Imagine processing (อย่างนัก อิอิ) เราสามารถใช้ &lt;code&gt;image&lt;/code&gt; เพื่อแสดงให้เป็นภาพออกได้&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;image(b);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;test&#34;&gt;Test&lt;/h2&gt;
+&lt;p&gt;ทดสอบๆ&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/mfiles/EP8_preview.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;snapshot_me&#34;
+	
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Analytic plot สร้างกราฟแบบ analytic</title>
+        <link>/analytic-plot-%E0%B8%AA%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%87%E0%B8%81%E0%B8%A3%E0%B8%B2%E0%B8%9F%E0%B9%81%E0%B8%9A%E0%B8%9A-analytic/</link>
+        <pubDate>Tue, 19 May 2020 00:00:00 +0000</pubDate>
+        
+        <guid>/analytic-plot-%E0%B8%AA%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%87%E0%B8%81%E0%B8%A3%E0%B8%B2%E0%B8%9F%E0%B9%81%E0%B8%9A%E0%B8%9A-analytic/</guid>
+        <description>&lt;p&gt;โดยส่วนใหญ่ MATLAB จะดีลกับข้อมูลที่เป็น numeric ฉะนั้นเวลาเราพล๊อตกราฟก็จะใช้ค่าข้อมูลที่เป็น numeric มาพล๊อตกัน บางครั้งถ้าเรามีสมการนึงที่อาจจะอ้างอิงมาจากทฤษฎี เราก็สามารถพล๊อตแบบ analytic ได้เหมือนกัน กล่าวคือไม่ต้องมานั่งแทนค่า เพื่อให้ได้ค่าข้อมูล numeric แล้วนำ ค่า numeric มาพล๊อตอีกที ซึ่งเสียเวลาและเพิ่ม vector แบบไม่จำเป็นลงใน workspace อีก&lt;/p&gt;
+&lt;p&gt;ในโพสต์นี้ เราจะลองพล๊อตแบบ analytic กัน ซึ่งใน &lt;code&gt;MATLAB&lt;/code&gt; ก็จะมี ฟังก์ชันตระกูล &lt;code&gt;fplot&lt;/code&gt;, &lt;code&gt;fplot3&lt;/code&gt;, &lt;code&gt;fsurf&lt;/code&gt;, &lt;code&gt;fcontour&lt;/code&gt;, &lt;code&gt;fmesh&lt;/code&gt;, &lt;code&gt;implicity&lt;/code&gt;, &lt;code&gt;fimplicity3&lt;/code&gt;  ที่อยู่ใน &lt;em&gt;Symbolic Math Toolbox&lt;/em&gt; สังเกตว่าคำสั่งเหล่านี้มีชื่อคล้ายๆ กับคำสั่งที่ใช้พล๊อตแบบ numeric เพียงแต่มี prefix &lt;em&gt;f-&lt;/em&gt; นำหน้า เราลงมือกันเลยดีกว่า&lt;/p&gt;
+&lt;h3 id=&#34;ตวอยางการพลอต-function-sinx&#34;&gt;ตัวอย่างการพล๊อต function &lt;code&gt;sin(x)&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;เริ่มต้นที่การสร้างตัวแปรโดยใช้คำสั่ง &lt;code&gt;syms&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;syms x
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;สังเกตว่าใน variable workspace มีตัวแปร x ที่มีคลาสเป็น &lt;code&gt;sym&lt;/code&gt; จากนั้นลองพล๊อต function sin&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;fplot(&lt;span style=&#34;color:#b58900&#34;&gt;sin&lt;/span&gt;(x))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;มันจะเลือกช่วงของ x ให้อัตโนมัติ ถ้าจะเลือกช่วงเองก็ทำได้โดยกำหนดช่วง&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;fplot(&lt;span style=&#34;color:#b58900&#34;&gt;sin&lt;/span&gt;(x),[&lt;span style=&#34;color:#2aa198&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#2aa198&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#b58900&#34;&gt;pi&lt;/span&gt;])
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;อีกตัวอย่าง ถ้าจะพล๊อตสมการเดียวแต่มีค่า argument ที่ต่างกัน เช่น &lt;strong&gt;sin(ax)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;ที่มี argument คือ a แต่เราต้องการให้มีค่าต่างๆ เช่น 1,2 และ 3 สามารถทำได้โดยการเรียกใช้ &lt;code&gt;subs&lt;/code&gt;
+เพื่อแทนค่า argument ด้วยค่า&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;% declear x and a as symbolic&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;syms x a
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;% plot symbolic but substitute a with [1,2,3]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;fplot(subs(&lt;span style=&#34;color:#b58900&#34;&gt;sin&lt;/span&gt;(a&lt;span style=&#34;color:#719e07&#34;&gt;*&lt;/span&gt;x)),a,[&lt;span style=&#34;color:#2aa198&#34;&gt;1&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;2&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;3&lt;/span&gt;]))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;เสนกราฟของเทอมคณตศาสตรเปะๆ&#34;&gt;เส้นกราฟของเทอมคณิตศาสตร์เป๊ะๆ&lt;/h3&gt;
+&lt;p&gt;ถามว่าทำไมต้องใช้ analytic plot คำตอบก็คือเราจะเส้นสมการแบบเป๊ะๆ แต่ถ้าใช้การแทนค่าในสมการเอาแล้วพล๊อตแบบ numeric ธรรมดามันก็พอใช่แทนได้ แต่จุดแต่ละจุดต้องต่อๆ กัน ไม่งั้นเวลาเรา fit curve เส้นกราฟ ที่ได้จะไม่ถูกต้องตามสมการ ขอลอกตัวอย่างจากเว็บ matlab ตาม&lt;a class=&#34;link&#34; href=&#34;https://www.mathworks.com/help/symbolic/examples/analytical-plotting-with-symbolic-math-toolbox.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ลิ้งค์นี้&lt;/a&gt; ในหัวข้อ &lt;em&gt;Mix Symblic and Numeric techniques to develop mathematical models&lt;/em&gt; ตามโค้ดดังต่อไปนี้&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;syms f(x)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;f(x) = x&lt;span style=&#34;color:#719e07&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#b58900&#34;&gt;exp&lt;/span&gt;(&lt;span style=&#34;color:#719e07&#34;&gt;-&lt;/span&gt;x)&lt;span style=&#34;color:#719e07&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#b58900&#34;&gt;sin&lt;/span&gt;(&lt;span style=&#34;color:#2aa198&#34;&gt;5&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;*&lt;/span&gt;x) &lt;span style=&#34;color:#719e07&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;2&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;xs = &lt;span style=&#34;color:#2aa198&#34;&gt;0&lt;/span&gt;:&lt;span style=&#34;color:#2aa198&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;3&lt;/span&gt;:&lt;span style=&#34;color:#2aa198&#34;&gt;3&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ys = double(subs(f,xs));
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;fplot(f,[&lt;span style=&#34;color:#2aa198&#34;&gt;0&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;3&lt;/span&gt;])
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hold on
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;plot(xs,ys,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;*k&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;DisplayName&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;Data Points&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;fplot(@(x) spline(xs,ys,x),[&lt;span style=&#34;color:#2aa198&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#2aa198&#34;&gt;3&lt;/span&gt;],&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;DisplayName&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;Spline interpolant&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hold off
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;grid on
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;legend show
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;ผลลัพธ์
+&lt;img src=&#34;/mfiles/EP5.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;graph&#34;
+	
+	
+&gt;
+จากกราฟเราจะเห็นว่าถ้าจุดไม่ติดกัน เวลาเรา fit curve (เส้นแดง) จะได้เส้นที่คลาดกับ เส้นที่เราพล๊อตจากสมการ (เส้นสีน้ำเงิน)&lt;/p&gt;
+&lt;p&gt;นอกจากนี้เนื่องจากมันเป็นแบบ analytic เราสามารถ &lt;code&gt;diff&lt;/code&gt; หรือ &lt;code&gt;int&lt;/code&gt; กับเทอม (symbolic term) นั้นได้เลย&lt;/p&gt;
+&lt;p&gt;สำหรับ function analytic plot แบบอื่นๆ ก็ใช้ในลักษณะเดียวกัน&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

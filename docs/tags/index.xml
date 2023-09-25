@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Tags on Bbeaw and binary</title>
+        <link>/tags/</link>
+        <description>Recent content in Tags on Bbeaw and binary</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <copyright>Except where otherwise noted, content on this site is licensed under a [Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/).  &lt;br /&gt;  Blog [Policy](https://www.termsfeed.com/live/63c43686-c465-4d13-bd81-24c77d342b85) </copyright>
+        <lastBuildDate>Thu, 16 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>color theme</title>
+        <link>/tags/color-theme/</link>
+        <pubDate>Thu, 16 Jul 2020 00:00:00 +0000</pubDate>
+        
+        <guid>/tags/color-theme/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>image</title>
+        <link>/tags/image/</link>
+        <pubDate>Fri, 26 Jun 2020 00:00:00 +0000</pubDate>
+        
+        <guid>/tags/image/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>email</title>
+        <link>/tags/email/</link>
+        <pubDate>Fri, 19 Jun 2020 00:00:00 +0000</pubDate>
+        
+        <guid>/tags/email/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>WebAccess</title>
+        <link>/tags/webaccess/</link>
+        <pubDate>Fri, 19 Jun 2020 00:00:00 +0000</pubDate>
+        
+        <guid>/tags/webaccess/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>visualization</title>
+        <link>/tags/visualization/</link>
+        <pubDate>Fri, 12 Jun 2020 00:00:00 +0000</pubDate>
+        
+        <guid>/tags/visualization/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>webcam</title>
+        <link>/tags/webcam/</link>
+        <pubDate>Fri, 12 Jun 2020 00:00:00 +0000</pubDate>
+        
+        <guid>/tags/webcam/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>function</title>
+        <link>/tags/function/</link>
+        <pubDate>Sat, 06 Jun 2020 00:00:00 +0000</pubDate>
+        
+        <guid>/tags/function/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>GUI</title>
+        <link>/tags/gui/</link>
+        <pubDate>Sat, 16 May 2020 00:00:00 +0000</pubDate>
+        
+        <guid>/tags/gui/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>object_handle</title>
+        <link>/tags/object_handle/</link>
+        <pubDate>Sat, 16 May 2020 00:00:00 +0000</pubDate>
+        
+        <guid>/tags/object_handle/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>

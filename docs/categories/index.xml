@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Categories on Bbeaw and binary</title>
+        <link>/categories/</link>
+        <description>Recent content in Categories on Bbeaw and binary</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <copyright>Except where otherwise noted, content on this site is licensed under a [Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/).  &lt;br /&gt;  Blog [Policy](https://www.termsfeed.com/live/63c43686-c465-4d13-bd81-24c77d342b85) </copyright>
+        <lastBuildDate>Thu, 16 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>matlab</title>
+        <link>/categories/matlab/</link>
+        <pubDate>Thu, 16 Jul 2020 00:00:00 +0000</pubDate>
+        
+        <guid>/categories/matlab/</guid>
+        <description></description>
+        </item>
+        
+    </channel>
+</rss>

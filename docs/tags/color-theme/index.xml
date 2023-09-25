@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>color theme on Bbeaw and binary</title>
+        <link>/tags/color-theme/</link>
+        <description>Recent content in color theme on Bbeaw and binary</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <copyright>Except where otherwise noted, content on this site is licensed under a [Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/).  &lt;br /&gt;  Blog [Policy](https://www.termsfeed.com/live/63c43686-c465-4d13-bd81-24c77d342b85) </copyright>
+        <lastBuildDate>Thu, 16 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="/tags/color-theme/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>เปลี่ยน color theme</title>
+        <link>/%E0%B9%80%E0%B8%9B%E0%B8%A5%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%99-color-theme/</link>
+        <pubDate>Thu, 16 Jul 2020 00:00:00 +0000</pubDate>
+        
+        <guid>/%E0%B9%80%E0%B8%9B%E0%B8%A5%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%99-color-theme/</guid>
+        <description>&lt;p&gt;ในแต่ละวัน ถ้าคุณต้องนั่งต้อง MATLAB นานๆ โดยค่า default ของสีของหน้าต่างที่ตั้งค่าก็ไม่ค่อยจะเป็นมิตรกับสายตาสักเท่าไร&lt;br&gt;
+วันนี้เราจึงต้องมาเปลี่ยนสีหน้าต่าง โดยเลือกเป็นชุดสีที่เข้ากัน color theme ที่นิยมใช้กันในหมู่ developer&lt;/p&gt;
+&lt;h2 id=&#34;เปลยนงายๆ-ท-perferences&#34;&gt;เปลี่ยนง่ายๆ ที่ Perferences&lt;/h2&gt;
+&lt;p&gt;วิธีการง่ายที่สุดไปเปลียนที่ Perferences -&amp;gt; Colors แล้วค่อยๆ เลือกที่ละสี ดูตามรูปเลย&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/static/mfiles/EP11_colortheme.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;colorsetting&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;ใช-code-เปลยนโดย-matlab-schemer&#34;&gt;ใช้ code เปลี่ยนโดย matlab-schemer&lt;/h2&gt;
+&lt;p&gt;เข้าไปที่ &lt;a class=&#34;link&#34; href=&#34;https://github.com/scottclowe/matlab-schemer&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;matlab-schemer&lt;/a&gt;
+ดาวน์โหลดมาไว้ในเครื่อง จะโหลดธรรมดา หรือ git clone ก็สะดวกดี&lt;/p&gt;
+&lt;p&gt;เข้าไปที่ folder แล้วเรียก function &lt;em&gt;schemer_import&lt;/em&gt; อันนี้เอาไว้เลือกเปลี่ยนชุดสี โดยชุดสี เป็นไฟล์เก็บข้อมูลไว้ที่ folder &lt;em&gt;schemes&lt;/em&gt;  เป็นนามสกุล prf สมมุติว่าจะเปลี่ยนเป็น &amp;lsquo;solarized-light&amp;rsquo; ก็ให้พิมพ์&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;schemer_import(&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;./schemes/solarized-light.prf&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;สีหน้าต่างก็เปลี่ยนเป็นตามชุดสีที่เลือก&lt;/p&gt;
+&lt;p&gt;พอเปลี่ยนแล้วก็จะเปลี่ยนเลย ปิดโปรแกรมแล้วเปิดใหม่ก็ไม่เปลี่ยน ไม่ต้อง add path คือเปลี่ยนแล้ว ถ้าจะไม่เปลี่ยนอีกก็ลบ folder ไปได้แล้ว เพราะเสมือนว่าเราไปปรับเปลี่ยนที่ Colors แล้ว&lt;/p&gt;
+&lt;p&gt;ลองเปลี่ยนกันดู เพื่อสายตาที่สบายมากขึ้น&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

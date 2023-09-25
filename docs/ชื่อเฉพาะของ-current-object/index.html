@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content='เนื่องจากพื้นฐานการ input โค้ดเป็นแบบ command line มันก็มักจะมีคำที่ใช้บ่งบอก object ที่ active อยู่เช่น gcf, gca คำพวกนี้คืนค่า object ต่างๆ ที่ใช้ ณ ปัจจุบัน เพื่อความสะดวกใช้การเซ็ตพารามิเตอร์ ประมาณว่าเพื่อสะดวก ไม่ต้องไปนั่งหา object ที่ workspace ว่าจะเลือกอันไหน
+ถ้ามี figure เปิดพร้อมๆ กัน 5 หน้าต่าง ด้วยคำสั่ง'>
+<title>ชื่อเฉพาะของ current object</title>
+
+<link rel='canonical' href='/%E0%B8%8A%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B9%80%E0%B8%89%E0%B8%9E%E0%B8%B2%E0%B8%B0%E0%B8%82%E0%B8%AD%E0%B8%87-current-object/'>
+
+<link rel="stylesheet" href="/scss/style.min.24ef1cc321916467896e8c70c10c0ad7b98c2a8df14298032fb637216e397f50.css"><meta property='og:title' content='ชื่อเฉพาะของ current object'>
+<meta property='og:description' content='เนื่องจากพื้นฐานการ input โค้ดเป็นแบบ command line มันก็มักจะมีคำที่ใช้บ่งบอก object ที่ active อยู่เช่น gcf, gca คำพวกนี้คืนค่า object ต่างๆ ที่ใช้ ณ ปัจจุบัน เพื่อความสะดวกใช้การเซ็ตพารามิเตอร์ ประมาณว่าเพื่อสะดวก ไม่ต้องไปนั่งหา object ที่ workspace ว่าจะเลือกอันไหน
+ถ้ามี figure เปิดพร้อมๆ กัน 5 หน้าต่าง ด้วยคำสั่ง'>
+<meta property='og:url' content='/%E0%B8%8A%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B9%80%E0%B8%89%E0%B8%9E%E0%B8%B2%E0%B8%B0%E0%B8%82%E0%B8%AD%E0%B8%87-current-object/'>
+<meta property='og:site_name' content='Bbeaw and binary'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='GUI' /><meta property='article:tag' content='object_handle' /><meta property='article:published_time' content='2020-05-16T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2020-05-16T00:00:00&#43;00:00'/>
+<meta name="twitter:title" content="ชื่อเฉพาะของ current object">
+<meta name="twitter:description" content="เนื่องจากพื้นฐานการ input โค้ดเป็นแบบ command line มันก็มักจะมีคำที่ใช้บ่งบอก object ที่ active อยู่เช่น gcf, gca คำพวกนี้คืนค่า object ต่างๆ ที่ใช้ ณ ปัจจุบัน เพื่อความสะดวกใช้การเซ็ตพารามิเตอร์ ประมาณว่าเพื่อสะดวก ไม่ต้องไปนั่งหา object ที่ workspace ว่าจะเลือกอันไหน
+ถ้ามี figure เปิดพร้อมๆ กัน 5 หน้าต่าง ด้วยคำสั่ง">
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "auto");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_huda2458f72ce188392d75c5d51cd8e24e_373_300x0_resize_box_3.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">Bbeaw and binary</a></h1>
+            <h2 class="site-description"></h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+
+        <div class="menu-bottom-section">
+            
+            
+                <li id="dark-mode-toggle">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                    <span>Dark Mode</span>
+                </li>
+            
+        </div>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/matlab/" >
+                matlab
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/%E0%B8%8A%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B9%80%E0%B8%89%E0%B8%9E%E0%B8%B2%E0%B8%B0%E0%B8%82%E0%B8%AD%E0%B8%87-current-object/">ชื่อเฉพาะของ current object</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">May 16, 2020</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    1 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <p>เนื่องจากพื้นฐานการ input โค้ดเป็นแบบ command line มันก็มักจะมีคำที่ใช้บ่งบอก object ที่ active อยู่เช่น gcf, gca คำพวกนี้คืนค่า object ต่างๆ ที่ใช้ ณ ปัจจุบัน เพื่อความสะดวกใช้การเซ็ตพารามิเตอร์ ประมาณว่าเพื่อสะดวก ไม่ต้องไปนั่งหา object ที่ workspace ว่าจะเลือกอันไหน</p>
+<p>ถ้ามี figure เปิดพร้อมๆ กัน  5 หน้าต่าง ด้วยคำสั่ง</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;"><code class="language-MATLAB" data-lang="MATLAB"><span style="display:flex;"><span><span style="color:#719e07">&gt;&gt;</span> <span style="color:#719e07">for</span> <span style="color:#b58900">i</span>=<span style="color:#2aa198">1</span>:<span style="color:#2aa198">5</span>
+</span></span><span style="display:flex;"><span><span style="color:#719e07">&gt;&gt;</span> f(<span style="color:#b58900">i</span>) = figure;
+</span></span><span style="display:flex;"><span><span style="color:#719e07">&gt;&gt;</span> <span style="color:#719e07">end</span>
+</span></span></code></pre></div><p>แล้วจะให้หน้าต่างนี้ (เอาอันนี้) ให้มีสีเขียว
+ก็เริ่มต้น active ที่หน้าต่างนั้นแล้วกลับมาพิมพ์ ที่ MATLAB command line ว่า</p>
+<div class="highlight"><pre tabindex="0" style="color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;"><code class="language-MATLAB" data-lang="MATLAB"><span style="display:flex;"><span><span style="color:#719e07">&gt;&gt;</span> set(gcf,<span style="color:#2aa198">&#39;color&#39;</span>,<span style="color:#2aa198">&#39;g&#39;</span>)
+</span></span></code></pre></div><p>เช่นเดียวกัน gca ที่หมายถึง axes ที่ active อยู่ปัจจุบัน ใช้แบบเดียวกัน หากจะให้ current object ไหน show ออกมาก็ไว้หน้าสุดให้เราเห็น ก็ใช้ shg (น่าจะหมายถึง &ldquo;<strong>sh</strong>ow <strong>g</strong>raphic &ldquo;)</p>
+<p>ถ้าจะลบ object ทุกอย่างออกจาก gcf ก็ใช้ ccf (<strong>c</strong>lear <strong>c</strong>urrent <strong>f</strong>igure) เช่นเดียวกันกับ cla (<strong>cl</strong>ear <strong>a</strong>xes)</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/gui/">GUI</a>
+        
+            <a href="/tags/object_handle/">object_handle</a>
+        
+    </section>
+
+
+    </footer>
+
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/%E0%B8%AA%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%87-gui-%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B9%83%E0%B8%8A%E0%B9%88-guide/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">สร้าง GUI แบบไม่ใช่ GUIDE</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+        2023 Except where otherwise noted, content on this site is licensed under a [Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/).  &lt;br /&gt;  Blog [Policy](https://www.termsfeed.com/live/63c43686-c465-4d13-bd81-24c77d342b85) 
+    </section>
+    
+    <section class="powerby">
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.20.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

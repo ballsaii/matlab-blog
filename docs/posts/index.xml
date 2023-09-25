@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Posts on Bbeaw and binary</title>
+        <link>/posts/</link>
+        <description>Recent content in Posts on Bbeaw and binary</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <copyright>Except where otherwise noted, content on this site is licensed under a [Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/).  &lt;br /&gt;  Blog [Policy](https://www.termsfeed.com/live/63c43686-c465-4d13-bd81-24c77d342b85) </copyright>
+        <lastBuildDate>Thu, 16 Jul 2020 00:00:00 +0000</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>เปลี่ยน color theme</title>
+        <link>/%E0%B9%80%E0%B8%9B%E0%B8%A5%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%99-color-theme/</link>
+        <pubDate>Thu, 16 Jul 2020 00:00:00 +0000</pubDate>
+        
+        <guid>/%E0%B9%80%E0%B8%9B%E0%B8%A5%E0%B8%B5%E0%B9%88%E0%B8%A2%E0%B8%99-color-theme/</guid>
+        <description>&lt;p&gt;ในแต่ละวัน ถ้าคุณต้องนั่งต้อง MATLAB นานๆ โดยค่า default ของสีของหน้าต่างที่ตั้งค่าก็ไม่ค่อยจะเป็นมิตรกับสายตาสักเท่าไร&lt;br&gt;
+วันนี้เราจึงต้องมาเปลี่ยนสีหน้าต่าง โดยเลือกเป็นชุดสีที่เข้ากัน color theme ที่นิยมใช้กันในหมู่ developer&lt;/p&gt;
+&lt;h2 id=&#34;เปลยนงายๆ-ท-perferences&#34;&gt;เปลี่ยนง่ายๆ ที่ Perferences&lt;/h2&gt;
+&lt;p&gt;วิธีการง่ายที่สุดไปเปลียนที่ Perferences -&amp;gt; Colors แล้วค่อยๆ เลือกที่ละสี ดูตามรูปเลย&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/static/mfiles/EP11_colortheme.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;colorsetting&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h2 id=&#34;ใช-code-เปลยนโดย-matlab-schemer&#34;&gt;ใช้ code เปลี่ยนโดย matlab-schemer&lt;/h2&gt;
+&lt;p&gt;เข้าไปที่ &lt;a class=&#34;link&#34; href=&#34;https://github.com/scottclowe/matlab-schemer&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;matlab-schemer&lt;/a&gt;
+ดาวน์โหลดมาไว้ในเครื่อง จะโหลดธรรมดา หรือ git clone ก็สะดวกดี&lt;/p&gt;
+&lt;p&gt;เข้าไปที่ folder แล้วเรียก function &lt;em&gt;schemer_import&lt;/em&gt; อันนี้เอาไว้เลือกเปลี่ยนชุดสี โดยชุดสี เป็นไฟล์เก็บข้อมูลไว้ที่ folder &lt;em&gt;schemes&lt;/em&gt;  เป็นนามสกุล prf สมมุติว่าจะเปลี่ยนเป็น &amp;lsquo;solarized-light&amp;rsquo; ก็ให้พิมพ์&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;schemer_import(&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;./schemes/solarized-light.prf&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;สีหน้าต่างก็เปลี่ยนเป็นตามชุดสีที่เลือก&lt;/p&gt;
+&lt;p&gt;พอเปลี่ยนแล้วก็จะเปลี่ยนเลย ปิดโปรแกรมแล้วเปิดใหม่ก็ไม่เปลี่ยน ไม่ต้อง add path คือเปลี่ยนแล้ว ถ้าจะไม่เปลี่ยนอีกก็ลบ folder ไปได้แล้ว เพราะเสมือนว่าเราไปปรับเปลี่ยนที่ Colors แล้ว&lt;/p&gt;
+&lt;p&gt;ลองเปลี่ยนกันดู เพื่อสายตาที่สบายมากขึ้น&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>สร้างโปสเตอร์ liverpool ได้แชมป์</title>
+        <link>/%E0%B8%AA%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%87%E0%B9%82%E0%B8%9B%E0%B8%AA%E0%B9%80%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B9%8C-liverpool-%E0%B9%84%E0%B8%94%E0%B9%89%E0%B9%81%E0%B8%8A%E0%B8%A1%E0%B8%9B%E0%B9%8C/</link>
+        <pubDate>Fri, 26 Jun 2020 00:00:00 +0000</pubDate>
+        
+        <guid>/%E0%B8%AA%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%87%E0%B9%82%E0%B8%9B%E0%B8%AA%E0%B9%80%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B9%8C-liverpool-%E0%B9%84%E0%B8%94%E0%B9%89%E0%B9%81%E0%B8%8A%E0%B8%A1%E0%B8%9B%E0%B9%8C/</guid>
+        <description>&lt;p&gt;เย้ ในที่สุดฤดูกาลนี้ ลิเวอร์พูล ก็ได้แชมป์พรีเมียร์ลีก หลังจากต้องรอคอยมาถึง 30 ปี วันนี้เรามาลองทำ poster ฉลองแชมป์กันเลย&lt;/p&gt;
+&lt;h2 id=&#34;load-liverpool-image&#34;&gt;Load &amp;lsquo;Liverpool&amp;rsquo; image&lt;/h2&gt;
+&lt;p&gt;เริ่มจากหารูปภาพพื้นหลังมาเก็บไว้ใน folder จากนั้นโหลด image เข้าโดย MATLAB ซึ่งจะได้ข้อมูลเป็น data&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;a = imread(&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;EP10_liverpool.jpg&amp;#39;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;ปรับแต่งให้อัตราส่วนเป็น 1:1 หาความกว้าง x ความยาวของ pixel และสุดท้ายปิดการมองเห็น axes&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;h= image(a);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ax = gca;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;f = gcf;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ax.DataAspectRatio = [&lt;span style=&#34;color:#2aa198&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#2aa198&#34;&gt;1&lt;/span&gt; &lt;span style=&#34;color:#2aa198&#34;&gt;1&lt;/span&gt;];
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[width,height,&lt;span style=&#34;color:#719e07&#34;&gt;~&lt;/span&gt;] = &lt;span style=&#34;color:#b58900&#34;&gt;size&lt;/span&gt;(h.CData);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ax.Visible = &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;off&amp;#39;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;add-text&#34;&gt;Add text&lt;/h2&gt;
+&lt;p&gt;สร้าง text object เพื่อทำการแสดง text บนรูปภาพ&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;quote = sprintf(&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;We are the champions 2019/2020&amp;#39;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;t = text(width&lt;span style=&#34;color:#719e07&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;2&lt;/span&gt;,height&lt;span style=&#34;color:#719e07&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;100&lt;/span&gt;,quote);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;t.FontSize = &lt;span style=&#34;color:#2aa198&#34;&gt;15&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;t.Color = &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;white&amp;#39;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;t.BackgroundColor = [&lt;span style=&#34;color:#2aa198&#34;&gt;0.5&lt;/span&gt; &lt;span style=&#34;color:#2aa198&#34;&gt;0.5&lt;/span&gt; &lt;span style=&#34;color:#2aa198&#34;&gt;0.5&lt;/span&gt;];
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;t.HorizontalAlignment = &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;center&amp;#39;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;export-image&#34;&gt;Export image&lt;/h2&gt;
+&lt;p&gt;ปรับแต่งจนพอใจ แล้วก็ทำการ export ภาพใช้ format &amp;lsquo;png&amp;rsquo;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;saveas(f,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;EP10_liverpool_addtext.png&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;img src=&#34;/mfiles/EP10_liverpool_addtext.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;ผลลัพธ์&#34;
+	
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>ใช้ MATLAB ส่งเมล์</title>
+        <link>/%E0%B9%83%E0%B8%8A%E0%B9%89-matlab-%E0%B8%AA%E0%B9%88%E0%B8%87%E0%B9%80%E0%B8%A1%E0%B8%A5%E0%B9%8C/</link>
+        <pubDate>Fri, 19 Jun 2020 00:00:00 +0000</pubDate>
+        
+        <guid>/%E0%B9%83%E0%B8%8A%E0%B9%89-matlab-%E0%B8%AA%E0%B9%88%E0%B8%87%E0%B9%80%E0%B8%A1%E0%B8%A5%E0%B9%8C/</guid>
+        <description>&lt;p&gt;ถ้าเราต้องรันโปรแกรมหรือโค้ดอะไร ที่นานๆ ไว้ที่คอมพิวเตอร์ที่ทำงาน จนไม่อยากจะนั่งเฝ้ารอ แต่อยากให้แจ้งเตือนเมื่อรันเสร็จแล้ว เราสามารถประยุกต์ใช้การส่งเมล์ เพื่อเอาไว้แจ้งเตือนเมื่อการรันโค้ดสิ้นสุด เรามาเริ่มต้นกันเลย&lt;/p&gt;
+&lt;h2 id=&#34;setting-email-preference&#34;&gt;Setting email preference&lt;/h2&gt;
+&lt;p&gt;เริ่มต้นจากต้องตั้งค่า preference ของ server อีเมล์ที่เราจะส่งก่อน ผ่าน smtp server ซึ่งเป็นโปรโตคอลมาตรฐานในการส่งเมล์ โดยขึ้นอยู่ว่าใช้อีเมล์ของอะไร เช่น ถ้าเป็น gmail ก็จะมี smtp server คือ &lt;em&gt;smtp.gmail.com&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;setting-mail-server&#34;&gt;Setting mail server&lt;/h3&gt;
+&lt;p&gt;ลำดับแรกตั้งค่า smtp, mail address และ password ตามตัวอย่าง&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;setpref(&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;Internet&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;E_mail&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;youremail@gmail.com&amp;#39;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;setpref(&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;Internet&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;SMTP_Server&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;smtp.gmail.com&amp;#39;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;setpref(&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;Internet&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;SMTP_Username&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;youremail@gmail.com&amp;#39;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;get-authority&#34;&gt;Get authority&lt;/h3&gt;
+&lt;p&gt;เนื่องจากความปลอดภัยของตัว gmail เอง เราจำเป็นต้องใช้ ทำได้โดยการให้ authority และใช้ port 456 สำหรับ SSL encryption&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;props = java.lang.System.getProperties;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;props.setProperty(&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;mail.smtp.auth&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;true&amp;#39;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;props.setProperty(&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;mail.smtp.socketFactory.port&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;465&amp;#39;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;และความปลอดภัยของ gmail อีกเช่นเคย เราสามารถใช้ password สำหรับแอฟ(เฉพาะกิจ) ได้โดยการเข้าไปที่ &lt;a class=&#34;link&#34; href=&#34;https://myaccount.google.com/security&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;&lt;em&gt;https://myaccount.google.com/security&lt;/em&gt;&lt;/a&gt; เลือก &lt;em&gt;รหัสผ่านสำหรับแอฟ&lt;/em&gt; แล้วทำการสร้าง password ขึ้นมา เราจะได้ password 16 หลัก จะได้ประมาณตัวอย่างด้านล่าง&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/mfiles/EP9_password4app.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;password4app&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;p&gt;จากนั้นนำ password นี้มาใส่ให้กับ smtp ใน MATLAB&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;setpref(&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;Internet&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;SMTP_Password&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;ctsasnufzoqlilrz&amp;#39;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;send-an-email&#34;&gt;Send an email&lt;/h2&gt;
+&lt;p&gt;ทดสอบส่งเมล์ไปที่ email &lt;a class=&#34;link&#34; href=&#34;mailto:chaipattana_s@cmu.ac.th&#34; &gt;chaipattana_s@cmu.ac.th&lt;/a&gt; เป็นอีเมล์ปลายทาง ผ่านคำสั่ง &lt;code&gt;sendmail(recipients,subject,message,attachments)&lt;/code&gt;
+หัวเรื่อง &lt;em&gt;Test TITLE EP9 by bbeaw.com&lt;/em&gt;
+เนื้อหา &lt;em&gt;Dear All&lt;/em&gt;&lt;br&gt;
+&lt;em&gt;I love bbeaw.com&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;เราก็ได้คำสั่งประมาณนี้ ในกรณีนี้เราไม่ได้แนบ attachment ไปด้วยเลยปิดจบด้วยวงเล็บปิด&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sendmail(&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;chaipattana_s@cmu.ac.th&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;Test TITLE EP9 by bbeaw.com&amp;#39;&lt;/span&gt;,sprintf(&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;Dear All \nI love bbeaw.com&amp;#39;&lt;/span&gt;));
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;อย่างที่กล่าวไว้ข้างต้น เราสามารถนำประยุกต์ว่าถ้า MATLAB รันอะไรเสร็จแล้วก็ส่งอีเมล์แจ้งเตือนได้ หรือ แม้กระทั่งแจ้งอีเมล์แล้วแนบไปด้วยยังได้&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Webcam in Matlab</title>
+        <link>/webcam-in-matlab/</link>
+        <pubDate>Fri, 12 Jun 2020 00:00:00 +0000</pubDate>
+        
+        <guid>/webcam-in-matlab/</guid>
+        <description>&lt;p&gt;เชื่อว่าหลายคนคงเริ่มคุ้นชินกับการ Video Conference จากการที่เรา social distancing กันภายใต้สถานการณ์ covid-19 อุปกรณ์ที่สำคัญในการ VC ก็คือ webcam ซึ่งบางคนก็มีพร้อมกับโน้ตบุ๊ค หรือ อาจจะซื้อมาติดตั้งในภายหลัง ยังไงก็แล้วแต่ วันนี้เราจะมา &lt;em&gt;connect&lt;/em&gt; webcam เข้ากับ MATLAB ดูเพื่อดึงข้อมูลภาพ เอาละมาเริ่มกันเลย&lt;/p&gt;
+&lt;h2 id=&#34;connect-webcam-to-pc&#34;&gt;Connect webcam to PC&lt;/h2&gt;
+&lt;p&gt;เริ่มแรกต่อ webcam เข้ากับเครื่องให้เรียบร้อยแล้วจึงเปิด MATLAB จากนั้นก็พิมพ์ที่ command line (prompt) ว่า&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt; webcamlist
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#b58900&#34;&gt;ans&lt;/span&gt; =
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  cell
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;HD Pro Webcam C920&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;เพื่อแสดงรายการ webcam ที่ต่ออยู่กับเครื่อง ที่เครื่องนี้ของผู้เขียนใช้ของ logitech C920 มันก็มีแค่ 1 รายการ&lt;/p&gt;
+&lt;h1 id=&#34;get-webcam-object&#34;&gt;get webcam object&lt;/h1&gt;
+&lt;p&gt;จากนั้นทำการ get ตัว webcam มาไว้ใน workspace ด้วย function&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;a = webcam;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;พอดีต่อแค่ตัวเดียวมันเลยรู้ว่าหมายถึงตัวไหน เราก็จะได้ object ชื่อ a ที่อยู่คลาส &lt;code&gt;webcam&lt;/code&gt;&lt;/p&gt;
+&lt;h1 id=&#34;webcam-properties&#34;&gt;Webcam properties&lt;/h1&gt;
+&lt;p&gt;ที่นี้เวลาเราจะเรียก method หรือ properties ของ a ง่าย สมมุติว่าเราจะดูว่า resolution ที่ใช้ปัจจุบันคืออะไร ก็พิมพ์ว่า&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt; a.Resolution
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#b58900&#34;&gt;ans&lt;/span&gt; =
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;640&lt;/span&gt;x480
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;แสดงว่า ณ ปัจจุบัน webcam ตัวนี้ใช้ที่ 640 x 480 pixel
+ถ้าอยากจะเปลี่ยน resolution ก็ทำได้ แต่จะดูว่ากล้องมี resolution อะไรบ้างก็ใช้&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt; a.AvailableResolutions
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#b58900&#34;&gt;ans&lt;/span&gt; =
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#2aa198&#34;&gt;1&lt;/span&gt;×&lt;span style=&#34;color:#2aa198&#34;&gt;19&lt;/span&gt; cell array
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  Columns &lt;span style=&#34;color:#2aa198&#34;&gt;1&lt;/span&gt; through &lt;span style=&#34;color:#2aa198&#34;&gt;6&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;640x480&amp;#39;&lt;/span&gt;    &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;160x90&amp;#39;&lt;/span&gt;    &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;160x120&amp;#39;&lt;/span&gt;    &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;176x144&amp;#39;&lt;/span&gt;    &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;320x180&amp;#39;&lt;/span&gt;    &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;320x240&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  Columns &lt;span style=&#34;color:#2aa198&#34;&gt;7&lt;/span&gt; through &lt;span style=&#34;color:#2aa198&#34;&gt;12&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;352x288&amp;#39;&lt;/span&gt;    &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;432x240&amp;#39;&lt;/span&gt;    &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;640x360&amp;#39;&lt;/span&gt;    &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;800x448&amp;#39;&lt;/span&gt;    &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;800x600&amp;#39;&lt;/span&gt;    &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;864x480&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  Columns &lt;span style=&#34;color:#2aa198&#34;&gt;13&lt;/span&gt; through &lt;span style=&#34;color:#2aa198&#34;&gt;18&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;960x720&amp;#39;&lt;/span&gt;    &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;1024x576&amp;#39;&lt;/span&gt;    &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;1280x720&amp;#39;&lt;/span&gt;    &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;1600x896&amp;#39;&lt;/span&gt;    &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;1920x1080&amp;#39;&lt;/span&gt;    &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;2304x1296&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  Column &lt;span style=&#34;color:#2aa198&#34;&gt;19&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;2304x1536&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;จากนั้นเปลี่ยน resolution สมมุติว่าเปลี่ยนเป็น 1024 x 576 ก็พิมพ์ว่า&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;a.Resolution = &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;1024x576&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;จริงๆ มี properties อีกเช่น  Brightness, WhiteBalance, Focus &amp;hellip; ตาม&lt;a class=&#34;link&#34; href=&#34;https://www.mathworks.com/help/supportpkg/usbwebcams/ug/set-properties-for-webcam-acquisition.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;เอกสารนี้&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;preview-webcam&#34;&gt;Preview webcam&lt;/h2&gt;
+&lt;p&gt;จะ preview ภาพ&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;a.preview
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;มันก็จะแสดงหน้าต่างวิดีโอขึ้นมา เหมือนเรา preview ผ่านโปรแกรมของ webcam เพียงแต่อันนี้มันขึ้นบน MATLAB จากนั้น
+ถ้าอยากจะ snap ภาพ ณ ขณะนั้นก็ใช้&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;b = a.snapshot;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;เราก็สามารถ snap ภาพโดยข้อมูลก็มี dimension ตาม resolution (height x width x 3) 3 ในตัวหลังน่าจะหมายถึง จำนวน layer ของ RGB&lt;/p&gt;
+&lt;h2 id=&#34;show-snapshot&#34;&gt;Show snapshot&lt;/h2&gt;
+&lt;p&gt;พอเราได้ข้อมูลภาพแล้ว แน่นอนถ้าเปิดดูตรงๆ มันก็จะเป็นตัวเลข (0-255) ซึ่งเหมาะกับการทำ Imagine processing (อย่างนัก อิอิ) เราสามารถใช้ &lt;code&gt;image&lt;/code&gt; เพื่อแสดงให้เป็นภาพออกได้&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;image(b);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h2 id=&#34;test&#34;&gt;Test&lt;/h2&gt;
+&lt;p&gt;ทดสอบๆ&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;/mfiles/EP8_preview.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;snapshot_me&#34;
+	
+	
+&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>ลำดับในการเรียก function</title>
+        <link>/%E0%B8%A5%E0%B8%B3%E0%B8%94%E0%B8%B1%E0%B8%9A%E0%B9%83%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%81-function/</link>
+        <pubDate>Sat, 06 Jun 2020 00:00:00 +0000</pubDate>
+        
+        <guid>/%E0%B8%A5%E0%B8%B3%E0%B8%94%E0%B8%B1%E0%B8%9A%E0%B9%83%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%A3%E0%B8%B5%E0%B8%A2%E0%B8%81-function/</guid>
+        <description>&lt;p&gt;ถ้าเรามีใช้ชื่อ function ที่ซ้ำๆ กัน MATLAB จะมีลำดับในการเรียก function เหล่านั้นขึ้นมาใช้
+เรารู้อยู่แล้วว่า &lt;code&gt;plot&lt;/code&gt; เป็น built-in function ของ MATLAB ถ้าเรายังจะดื้อดึงในการสร้างไฟล์ function ที่ชื่อ &lt;code&gt;plot&lt;/code&gt; เหมือนกันขึ้นมาอีกจะเกิดอะไรขึ้น MATLAB จะเรียกใช้ตัวไหนก่อน เรามาดูกัน&lt;/p&gt;
+&lt;p&gt;แค่เราสร้าง &lt;em&gt;plot.m&lt;/em&gt; MATLAB ก็จะทำการเตือนก่อน&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Warning: Function plot has the same name as a MATLAB builtin. We
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;suggest you rename the &lt;span style=&#34;color:#719e07&#34;&gt;function&lt;/span&gt; to avoid a potential name conflict. 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Warning: Function plot has the same name as a MATLAB builtin. We
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;suggest you rename the &lt;span style=&#34;color:#719e07&#34;&gt;function&lt;/span&gt; to avoid a potential name conflict. 
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;ในโค้ด มีคำสั่งง่ายๆ แบบนี้&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;plot&lt;/span&gt;(x,y)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#b58900&#34;&gt;disp&lt;/span&gt;(x)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#b58900&#34;&gt;disp&lt;/span&gt;(x)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;ใน command line พิมพ์ว่า&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;plot([&lt;span style=&#34;color:#2aa198&#34;&gt;1&lt;/span&gt;:&lt;span style=&#34;color:#2aa198&#34;&gt;10&lt;/span&gt;],[&lt;span style=&#34;color:#2aa198&#34;&gt;1&lt;/span&gt;:&lt;span style=&#34;color:#2aa198&#34;&gt;10&lt;/span&gt;])
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;ผลลัพธ์ก็คือ&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;1&lt;/span&gt;     &lt;span style=&#34;color:#2aa198&#34;&gt;2&lt;/span&gt;     &lt;span style=&#34;color:#2aa198&#34;&gt;3&lt;/span&gt;     &lt;span style=&#34;color:#2aa198&#34;&gt;4&lt;/span&gt;     &lt;span style=&#34;color:#2aa198&#34;&gt;5&lt;/span&gt;     &lt;span style=&#34;color:#2aa198&#34;&gt;6&lt;/span&gt;     &lt;span style=&#34;color:#2aa198&#34;&gt;7&lt;/span&gt;     &lt;span style=&#34;color:#2aa198&#34;&gt;8&lt;/span&gt;     &lt;span style=&#34;color:#2aa198&#34;&gt;9&lt;/span&gt;    &lt;span style=&#34;color:#2aa198&#34;&gt;10&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;1&lt;/span&gt;     &lt;span style=&#34;color:#2aa198&#34;&gt;2&lt;/span&gt;     &lt;span style=&#34;color:#2aa198&#34;&gt;3&lt;/span&gt;     &lt;span style=&#34;color:#2aa198&#34;&gt;4&lt;/span&gt;     &lt;span style=&#34;color:#2aa198&#34;&gt;5&lt;/span&gt;     &lt;span style=&#34;color:#2aa198&#34;&gt;6&lt;/span&gt;     &lt;span style=&#34;color:#2aa198&#34;&gt;7&lt;/span&gt;     &lt;span style=&#34;color:#2aa198&#34;&gt;8&lt;/span&gt;     &lt;span style=&#34;color:#2aa198&#34;&gt;9&lt;/span&gt;    &lt;span style=&#34;color:#2aa198&#34;&gt;10&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;หมายความว่า MATLAB เลือกที่จะเรียก &lt;em&gt;plot.m&lt;/em&gt; ที่เราสร้างขึ้นมากกว่าจะเรียกจาก  built-in function&lt;/p&gt;
+&lt;p&gt;อีกตัวอย่างนึง ถ้ามี function สมมุติว่าชื่อ &lt;em&gt;Duplic1.m&lt;/em&gt; ที่อยู่ใน &lt;em&gt;Current Folder&lt;/em&gt; กับ &lt;em&gt;Duplic1.m&lt;/em&gt; ที่อยู่ใน path &lt;em&gt;/path/Duplic1.m&lt;/em&gt; ที่ได้ทำการ add path เรียบร้อย เราจะมาดูสิว่า MATLAB จะเลือกเรียกใชังานตัวไหนก่อน&lt;/p&gt;
+&lt;p&gt;โค้ดใน &lt;em&gt;Duplic1.m&lt;/em&gt; คือ&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;Duplic1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#b58900&#34;&gt;disp&lt;/span&gt;(&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;Dupli1 in current path&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;และโค้ดใน &lt;em&gt;/path/Duplic1.m&lt;/em&gt; คือ&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;Duplic1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#b58900&#34;&gt;disp&lt;/span&gt;(&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;Dupli1 in added path&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;ผลลัพธ์คือ&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Dupli1 in current path
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;หมายความว่า MATLAB จะเลือกใน &lt;em&gt;Current Folder&lt;/em&gt; ก่อนใน added path&lt;/p&gt;
+&lt;p&gt;สรุปง่ายๆ การเรียกใช้ function จะเป็นไปตามเอกสาร &lt;a class=&#34;link&#34; href=&#34;https://www.mathworks.com/help/matlab/matlab_prog/function-precedence-order.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;function procedure order&lt;/a&gt; นี้ ทางดีที่สุดคือ พยายามไม่ใช่ชื่อช้ำกัน หรือ ถ้ามี function อะไรไม่รู้ที่ add อยู่ path หรือไม่แน่ใจว่าเราเลือกชื่อถูกตามที่ต้องการรึป่าว ให้เช็คด้วยคำสั่ง &lt;code&gt;which&lt;/code&gt; ตามด้วยชื่อ function มันก็จะบอกว่า function ที่ใช้งานนี้อยู่ใน location ไหน&lt;/p&gt;
+&lt;hr&gt;
+</description>
+        </item>
+        <item>
+        <title>แอบดู Variable</title>
+        <link>/%E0%B9%81%E0%B8%AD%E0%B8%9A%E0%B8%94%E0%B8%B9-variable/</link>
+        <pubDate>Thu, 28 May 2020 00:00:00 +0000</pubDate>
+        
+        <guid>/%E0%B9%81%E0%B8%AD%E0%B8%9A%E0%B8%94%E0%B8%B9-variable/</guid>
+        <description>&lt;h4 id=&#34;who-สอดสองตวแปร&#34;&gt;who สอดส่องตัวแปร&lt;/h4&gt;
+&lt;p&gt;เมื่อเราสร้าง function ขึ้นมาอันหนึ่ง ตัวแปรที่อยู่ใน function จะไม่ปรากฏบน base workspace แต่ถ้าเราอยากรู้ว่าระหว่างที่รันนั้น มีตัวแปรอะไรบ้าง มีคุณสมบัติอะไร ถ้าไม่ทำการ &lt;em&gt;Debug&lt;/em&gt;  มีอีกวิธีนึงก็คือ การใช้ &lt;em&gt;whos&lt;/em&gt; (&lt;em&gt;who&lt;/em&gt; เฉยๆ จะบอกแค่ชื่อแต่ &lt;em&gt;whos&lt;/em&gt; จะบอกมากกว่านั้น) แทรกลงไปในโค้ดไปเลย
+เมื่อโปรแกรมรันผ่าน มันก็จะแสดงผลออกมาทาง command line&lt;/p&gt;
+&lt;p&gt;ในตัวอย่างนี้ เรามี function ชื่อ &lt;em&gt;EP6_FnWs&lt;/em&gt; ที่รับตัวแปร &lt;em&gt;a&lt;/em&gt; และ &lt;em&gt;b&lt;/em&gt; เอามาบวกกันโดย function หลัก และคูณกันโดย &lt;em&gt;nested function&lt;/em&gt; ก็จะเขียน &lt;code&gt;EP6_FnWs.m&lt;/code&gt; ได้ออกมาดังนี้ โดยเราจะทำการแทรก &lt;em&gt;whos&lt;/em&gt; ใน function หลัก และ nested function&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;function&lt;/span&gt; output = &lt;span style=&#34;color:#268bd2&#34;&gt;EP6_FnWs&lt;/span&gt;(a,b)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;output(&lt;span style=&#34;color:#2aa198&#34;&gt;1&lt;/span&gt;) = a &lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt; b;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;output(&lt;span style=&#34;color:#2aa198&#34;&gt;2&lt;/span&gt;) = nested_fn(a,b);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#b58900&#34;&gt;disp&lt;/span&gt;(&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;Output from whos is below in EP6_FnWs&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;whos
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#b58900&#34;&gt;disp&lt;/span&gt;(&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;-------------end---------------&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;% nested function&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;    function&lt;/span&gt; output_n = &lt;span style=&#34;color:#268bd2&#34;&gt;nested_fn&lt;/span&gt;(a_n,b_n)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        output_n = (a_n&lt;span style=&#34;color:#719e07&#34;&gt;*&lt;/span&gt;b_n);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#b58900&#34;&gt;disp&lt;/span&gt;(&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;Output from whos is below in nested function&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        whos
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#b58900&#34;&gt;disp&lt;/span&gt;(&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;-------------end---------------&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#719e07&#34;&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h4 id=&#34;ผลลพธจากการแอบสอง&#34;&gt;ผลลัพธ์จากการแอบส่อง&lt;/h4&gt;
+&lt;p&gt;ผลลัพธ์ที่แสดงบน command line คือ&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Output from whos is below in nested function
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  Name          Size            Bytes  Class     Attributes
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  ---- EP6_FnWs/nested_fn ---------------------------------
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  a_n           1x1                 8  double              
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  b_n           1x1                 8  double              
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  output_n      1x1                 8  double              
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  ---- EP6_FnWs -------------------------------------------
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  a             1x1                 8  double              
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  b             1x1                 8  double              
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  output        1x1                 8  double              
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;-------------end---------------
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;Output from whos is below in EP6_FnWs
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  Name        Size            Bytes  Class     Attributes
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  a           1x1                 8  double              
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  b           1x1                 8  double              
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  output      1x2                16  double              
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;-------------end---------------
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;จะสังเกตได้ว่า เมื่อ &lt;em&gt;whos&lt;/em&gt; อยู่ใน nested function มันจะแสดงตัวแปรทั้ง functionหลัก และ nested function ณ ขณะนั้น output ยังมี ขนาด 1x1 ที่มาจากการทำงานของ function หลักในบรรทัดก่อน หลังจากเสร็จสิ้น การทำงานของ function หลักและ nested function &lt;em&gt;whos&lt;/em&gt; ที่ตอนนี้อยู่ใน function หลักก็จะแสดงแค่ตัวแปรที่อยู่ใน function หลักเท่านั้น&lt;/p&gt;
+&lt;p&gt;นอกจากนี้ ยังแอบสอดส่อง variable ที่เก็บอยู่ใน MAT-file (*.mat) (ไฟล์ที่เอาไว้เก็บค่าตัวแปร อันนี้ไม่ใช่ .m ที่เป็น MATLAB script) โดยการ&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;whos &lt;span style=&#34;color:#719e07&#34;&gt;-&lt;/span&gt;file filename
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;อย่าลืมถ้าเรียกเป็นชื่อตรงๆ ใส่ &amp;rsquo;&amp;rsquo; ครอบชื่อไฟล์ไว้ด้วย ไม่งั้นมันอาจจะคิดว่าเป็นตัวแปร&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Analytic plot สร้างกราฟแบบ analytic</title>
+        <link>/analytic-plot-%E0%B8%AA%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%87%E0%B8%81%E0%B8%A3%E0%B8%B2%E0%B8%9F%E0%B9%81%E0%B8%9A%E0%B8%9A-analytic/</link>
+        <pubDate>Tue, 19 May 2020 00:00:00 +0000</pubDate>
+        
+        <guid>/analytic-plot-%E0%B8%AA%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%87%E0%B8%81%E0%B8%A3%E0%B8%B2%E0%B8%9F%E0%B9%81%E0%B8%9A%E0%B8%9A-analytic/</guid>
+        <description>&lt;p&gt;โดยส่วนใหญ่ MATLAB จะดีลกับข้อมูลที่เป็น numeric ฉะนั้นเวลาเราพล๊อตกราฟก็จะใช้ค่าข้อมูลที่เป็น numeric มาพล๊อตกัน บางครั้งถ้าเรามีสมการนึงที่อาจจะอ้างอิงมาจากทฤษฎี เราก็สามารถพล๊อตแบบ analytic ได้เหมือนกัน กล่าวคือไม่ต้องมานั่งแทนค่า เพื่อให้ได้ค่าข้อมูล numeric แล้วนำ ค่า numeric มาพล๊อตอีกที ซึ่งเสียเวลาและเพิ่ม vector แบบไม่จำเป็นลงใน workspace อีก&lt;/p&gt;
+&lt;p&gt;ในโพสต์นี้ เราจะลองพล๊อตแบบ analytic กัน ซึ่งใน &lt;code&gt;MATLAB&lt;/code&gt; ก็จะมี ฟังก์ชันตระกูล &lt;code&gt;fplot&lt;/code&gt;, &lt;code&gt;fplot3&lt;/code&gt;, &lt;code&gt;fsurf&lt;/code&gt;, &lt;code&gt;fcontour&lt;/code&gt;, &lt;code&gt;fmesh&lt;/code&gt;, &lt;code&gt;implicity&lt;/code&gt;, &lt;code&gt;fimplicity3&lt;/code&gt;  ที่อยู่ใน &lt;em&gt;Symbolic Math Toolbox&lt;/em&gt; สังเกตว่าคำสั่งเหล่านี้มีชื่อคล้ายๆ กับคำสั่งที่ใช้พล๊อตแบบ numeric เพียงแต่มี prefix &lt;em&gt;f-&lt;/em&gt; นำหน้า เราลงมือกันเลยดีกว่า&lt;/p&gt;
+&lt;h3 id=&#34;ตวอยางการพลอต-function-sinx&#34;&gt;ตัวอย่างการพล๊อต function &lt;code&gt;sin(x)&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;เริ่มต้นที่การสร้างตัวแปรโดยใช้คำสั่ง &lt;code&gt;syms&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;syms x
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;สังเกตว่าใน variable workspace มีตัวแปร x ที่มีคลาสเป็น &lt;code&gt;sym&lt;/code&gt; จากนั้นลองพล๊อต function sin&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;fplot(&lt;span style=&#34;color:#b58900&#34;&gt;sin&lt;/span&gt;(x))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;มันจะเลือกช่วงของ x ให้อัตโนมัติ ถ้าจะเลือกช่วงเองก็ทำได้โดยกำหนดช่วง&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;fplot(&lt;span style=&#34;color:#b58900&#34;&gt;sin&lt;/span&gt;(x),[&lt;span style=&#34;color:#2aa198&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#2aa198&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#b58900&#34;&gt;pi&lt;/span&gt;])
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;อีกตัวอย่าง ถ้าจะพล๊อตสมการเดียวแต่มีค่า argument ที่ต่างกัน เช่น &lt;strong&gt;sin(ax)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;ที่มี argument คือ a แต่เราต้องการให้มีค่าต่างๆ เช่น 1,2 และ 3 สามารถทำได้โดยการเรียกใช้ &lt;code&gt;subs&lt;/code&gt;
+เพื่อแทนค่า argument ด้วยค่า&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;% declear x and a as symbolic&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;syms x a
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;% plot symbolic but substitute a with [1,2,3]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;fplot(subs(&lt;span style=&#34;color:#b58900&#34;&gt;sin&lt;/span&gt;(a&lt;span style=&#34;color:#719e07&#34;&gt;*&lt;/span&gt;x)),a,[&lt;span style=&#34;color:#2aa198&#34;&gt;1&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;2&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;3&lt;/span&gt;]))
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;เสนกราฟของเทอมคณตศาสตรเปะๆ&#34;&gt;เส้นกราฟของเทอมคณิตศาสตร์เป๊ะๆ&lt;/h3&gt;
+&lt;p&gt;ถามว่าทำไมต้องใช้ analytic plot คำตอบก็คือเราจะเส้นสมการแบบเป๊ะๆ แต่ถ้าใช้การแทนค่าในสมการเอาแล้วพล๊อตแบบ numeric ธรรมดามันก็พอใช่แทนได้ แต่จุดแต่ละจุดต้องต่อๆ กัน ไม่งั้นเวลาเรา fit curve เส้นกราฟ ที่ได้จะไม่ถูกต้องตามสมการ ขอลอกตัวอย่างจากเว็บ matlab ตาม&lt;a class=&#34;link&#34; href=&#34;https://www.mathworks.com/help/symbolic/examples/analytical-plotting-with-symbolic-math-toolbox.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;ลิ้งค์นี้&lt;/a&gt; ในหัวข้อ &lt;em&gt;Mix Symblic and Numeric techniques to develop mathematical models&lt;/em&gt; ตามโค้ดดังต่อไปนี้&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;syms f(x)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;f(x) = x&lt;span style=&#34;color:#719e07&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#b58900&#34;&gt;exp&lt;/span&gt;(&lt;span style=&#34;color:#719e07&#34;&gt;-&lt;/span&gt;x)&lt;span style=&#34;color:#719e07&#34;&gt;*&lt;/span&gt;&lt;span style=&#34;color:#b58900&#34;&gt;sin&lt;/span&gt;(&lt;span style=&#34;color:#2aa198&#34;&gt;5&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;*&lt;/span&gt;x) &lt;span style=&#34;color:#719e07&#34;&gt;-&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;2&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;xs = &lt;span style=&#34;color:#2aa198&#34;&gt;0&lt;/span&gt;:&lt;span style=&#34;color:#2aa198&#34;&gt;1&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;/&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;3&lt;/span&gt;:&lt;span style=&#34;color:#2aa198&#34;&gt;3&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ys = double(subs(f,xs));
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;fplot(f,[&lt;span style=&#34;color:#2aa198&#34;&gt;0&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;3&lt;/span&gt;])
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hold on
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;plot(xs,ys,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;*k&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;DisplayName&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;Data Points&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;fplot(@(x) spline(xs,ys,x),[&lt;span style=&#34;color:#2aa198&#34;&gt;0&lt;/span&gt; &lt;span style=&#34;color:#2aa198&#34;&gt;3&lt;/span&gt;],&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;DisplayName&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;Spline interpolant&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hold off
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;grid on
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;legend show
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;ผลลัพธ์
+&lt;img src=&#34;/mfiles/EP5.png&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;graph&#34;
+	
+	
+&gt;
+จากกราฟเราจะเห็นว่าถ้าจุดไม่ติดกัน เวลาเรา fit curve (เส้นแดง) จะได้เส้นที่คลาดกับ เส้นที่เราพล๊อตจากสมการ (เส้นสีน้ำเงิน)&lt;/p&gt;
+&lt;p&gt;นอกจากนี้เนื่องจากมันเป็นแบบ analytic เราสามารถ &lt;code&gt;diff&lt;/code&gt; หรือ &lt;code&gt;int&lt;/code&gt; กับเทอม (symbolic term) นั้นได้เลย&lt;/p&gt;
+&lt;p&gt;สำหรับ function analytic plot แบบอื่นๆ ก็ใช้ในลักษณะเดียวกัน&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>ชื่อเฉพาะของ current object</title>
+        <link>/%E0%B8%8A%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B9%80%E0%B8%89%E0%B8%9E%E0%B8%B2%E0%B8%B0%E0%B8%82%E0%B8%AD%E0%B8%87-current-object/</link>
+        <pubDate>Sat, 16 May 2020 00:00:00 +0000</pubDate>
+        
+        <guid>/%E0%B8%8A%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B9%80%E0%B8%89%E0%B8%9E%E0%B8%B2%E0%B8%B0%E0%B8%82%E0%B8%AD%E0%B8%87-current-object/</guid>
+        <description>&lt;p&gt;เนื่องจากพื้นฐานการ input โค้ดเป็นแบบ command line มันก็มักจะมีคำที่ใช้บ่งบอก object ที่ active อยู่เช่น gcf, gca คำพวกนี้คืนค่า object ต่างๆ ที่ใช้ ณ ปัจจุบัน เพื่อความสะดวกใช้การเซ็ตพารามิเตอร์ ประมาณว่าเพื่อสะดวก ไม่ต้องไปนั่งหา object ที่ workspace ว่าจะเลือกอันไหน&lt;/p&gt;
+&lt;p&gt;ถ้ามี figure เปิดพร้อมๆ กัน  5 หน้าต่าง ด้วยคำสั่ง&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;for&lt;/span&gt; &lt;span style=&#34;color:#b58900&#34;&gt;i&lt;/span&gt;=&lt;span style=&#34;color:#2aa198&#34;&gt;1&lt;/span&gt;:&lt;span style=&#34;color:#2aa198&#34;&gt;5&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt; f(&lt;span style=&#34;color:#b58900&#34;&gt;i&lt;/span&gt;) = figure;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#719e07&#34;&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;แล้วจะให้หน้าต่างนี้ (เอาอันนี้) ให้มีสีเขียว
+ก็เริ่มต้น active ที่หน้าต่างนั้นแล้วกลับมาพิมพ์ ที่ MATLAB command line ว่า&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;&amp;gt;&amp;gt;&lt;/span&gt; set(gcf,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;color&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;g&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;เช่นเดียวกัน gca ที่หมายถึง axes ที่ active อยู่ปัจจุบัน ใช้แบบเดียวกัน หากจะให้ current object ไหน show ออกมาก็ไว้หน้าสุดให้เราเห็น ก็ใช้ shg (น่าจะหมายถึง &amp;ldquo;&lt;strong&gt;sh&lt;/strong&gt;ow &lt;strong&gt;g&lt;/strong&gt;raphic &amp;ldquo;)&lt;/p&gt;
+&lt;p&gt;ถ้าจะลบ object ทุกอย่างออกจาก gcf ก็ใช้ ccf (&lt;strong&gt;c&lt;/strong&gt;lear &lt;strong&gt;c&lt;/strong&gt;urrent &lt;strong&gt;f&lt;/strong&gt;igure) เช่นเดียวกันกับ cla (&lt;strong&gt;cl&lt;/strong&gt;ear &lt;strong&gt;a&lt;/strong&gt;xes)&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>สร้าง GUI แบบไม่ใช่ GUIDE</title>
+        <link>/%E0%B8%AA%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%87-gui-%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B9%83%E0%B8%8A%E0%B9%88-guide/</link>
+        <pubDate>Wed, 13 May 2020 00:00:00 +0000</pubDate>
+        
+        <guid>/%E0%B8%AA%E0%B8%A3%E0%B9%89%E0%B8%B2%E0%B8%87-gui-%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B9%83%E0%B8%8A%E0%B9%88-guide/</guid>
+        <description>&lt;h2 id=&#34;สราง-gui-แบบไมใช-guide&#34;&gt;สร้าง GUI แบบไม่ใช่ GUIDE&lt;/h2&gt;
+&lt;p&gt;สำหรับมือใหม่ อาจจะการเรียนรู้การสร้าง GUI matlab ผ่าน GUIDE ซึ่งเป็นวิธีที่ง่ายและสะดวกที่สุดในการออกแบบ layout GUI ด้วย component ต่างๆ มีอีกวิธีหนึ่งที่สามารถสร้าง GUI ได้เหมือนกันคือการใช้ function เพื่อให้สร้าง (วาด) component ต่างๆ ให้เป็น GUI ซึ่งในเอกสาร Help จะเรียกว่า Programmatic GUI&lt;/p&gt;
+&lt;p&gt;อันที่จริงการสร้าง GUI แบบ programatic ไม่ได้แตกต่างการที่เรียกใช้คำสั่ง plot เท่าใดนัก ถ้าพูดลงในรายละเอียดก็คือเมื่อเราเรียกใช้คำสั่ง plot มันก็จะสร้าง object นึง ที่เรียกว่า figure ซึ่งเปรียบเสมือนหน้าต่าง จากนั้นก็สร้าง axes object เอาไว้เป็นแกนพล๊อต จากนั้นก็สร้าง line object (เส้นกราฟ) ลงบน axes ที่เป็น parent&lt;/p&gt;
+&lt;p&gt;ถ้าเราเพิ่มเติม uicontrol object ที่มีสามารถตอบสนอง เช่น pushbutton ที่มี action คือ click หรือแม้กระทั่งส่วนที่เป็น uimenu เป็น uicontrol แบบหนึ่งแต่อาจจะมีการเรียก event ที่ต่างจาก uicontrol มาตรฐานนิดหน่อย ค่อยพูดถึงในภายหลัง ถ้าเพิ่ม uicontrol textedit เราก็จะได้กล่องรับ/ส่งข้อความ ทีนี้ที่เหลือก็จะเป็นหน้าที่ของ UI designer ที่ต้องออกแบบว่าควรจะออกแบบหน้าตา Interface อย่างไร&lt;/p&gt;
+&lt;p&gt;เกริ่นมาซะยาว มาลองสร้าง programatic GUI ที่เอาไว้ส่งข้อความไปมาระหว่างหน้าต่าง 2 อัน step-by-step กันดีกว่า&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;1-create-function&#34;&gt;1. Create function&lt;/h3&gt;
+&lt;p&gt;สร้างหน้าต่างพร้อมใส่กล่องรับข้อความกับปุ่มส่งขึ้นมา 2 ชุด โดยสร้าง function ชื่อ &lt;code&gt;EP3_GUI.m&lt;/code&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;EP3_GUI&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;% first window&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;f1 = figure(&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;Position&amp;#39;&lt;/span&gt;,[&lt;span style=&#34;color:#2aa198&#34;&gt;100&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;100&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;400&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;400&lt;/span&gt;],&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;Units&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;pixel&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;Tag&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;GUI1&amp;#39;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;% add a send button&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;send1 = uicontrol(f1,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;style&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;pushbutton&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;String&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;send&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;Units&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;pixel&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;Position&amp;#39;&lt;/span&gt;,[&lt;span style=&#34;color:#2aa198&#34;&gt;100&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;100&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;200&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;30&lt;/span&gt;]);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;% add a text box&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;text1 = uicontrol(f1,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;style&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;edit&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;String&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;Units&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;pixel&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;Position&amp;#39;&lt;/span&gt;,[&lt;span style=&#34;color:#2aa198&#34;&gt;100&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;300&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;200&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;30&lt;/span&gt;]);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;% second window&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;f2 = figure(&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;Position&amp;#39;&lt;/span&gt;,[&lt;span style=&#34;color:#2aa198&#34;&gt;600&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;100&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;400&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;400&lt;/span&gt;],&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;Units&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;pixel&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;Tag&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;GUI2&amp;#39;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;% add a send button&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;send2 = uicontrol(f2,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;style&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;pushbutton&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;String&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;send&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;Units&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;pixel&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;Position&amp;#39;&lt;/span&gt;,[&lt;span style=&#34;color:#2aa198&#34;&gt;100&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;100&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;200&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;30&lt;/span&gt;]);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;% add a text box&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;text2 = uicontrol(f2,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;style&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;edit&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;String&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;Units&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;pixel&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;Position&amp;#39;&lt;/span&gt;,[&lt;span style=&#34;color:#2aa198&#34;&gt;100&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;300&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;200&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;30&lt;/span&gt;]);
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;2-bind-to-callback_function-to-handle-function&#34;&gt;2. Bind to Callback_function to handle function&lt;/h3&gt;
+&lt;p&gt;จากนั้นก็แอด Callback function ไปที่ object ในกรณีนี้คือปุ่ม &lt;code&gt;send1&lt;/code&gt; และปุ่ม &lt;code&gt;send2&lt;/code&gt; กล่าวคือ Callback function จะบอกว่าถ้าเกิดเหตุการณ์กับ object นี้แล้วให้ไปเรียก handle function ตัวไหน&lt;/p&gt;
+&lt;p&gt;ปกติถ้าสร้าง object ควรจะเซ็ต Callback function มาให้เลยจะได้ไม่ลืม&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;send1.Callback = @sendTextFX1;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;send2.Callback = @sendTextFX2;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;handle function ที่เซ็ตให้กับ Callback จะใช้สร้างโดย &lt;em&gt;@&lt;/em&gt; ตามด้วยชื่อ function
+สิ่งที่ไปพร้อมกับ handle function คือ &lt;code&gt;hObject&lt;/code&gt; ที่ถูกกระทำ กับ &lt;code&gt;handles&lt;/code&gt; ที่เก็บข้อมูล&lt;/p&gt;
+&lt;h3 id=&#34;3-code-callback_function&#34;&gt;3. Code Callback_function&lt;/h3&gt;
+&lt;p&gt;สร้าง function ขึ้นมาเพื่อส่งรับข้อความจากกล่องรับข้อความในหน้าต่างที่ 1 ไป หน้าต่าง 2 และในทางกลับกัน&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;sendTextFX1&lt;/span&gt;(hObject,eventdata,handles)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;%(hObject,eventdata,handles) must be preserved due to handle function by @&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#586e75&#34;&gt;% get value&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    str1 = get(text1,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;String&amp;#39;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#586e75&#34;&gt;% send value&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    set(text2,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;String&amp;#39;&lt;/span&gt;,str1);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#586e75&#34;&gt;% store str1 in object in hOject which text1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;     guidata(hObject,str1);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#719e07&#34;&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;    function&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;sendTextFX2&lt;/span&gt;(hObject,eventdata,handles)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#586e75&#34;&gt;% get value&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    str2 = get(text2,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;String&amp;#39;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#586e75&#34;&gt;% send value&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    set(text1,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;String&amp;#39;&lt;/span&gt;,str2);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#586e75&#34;&gt;% store str2 in object in hOject which is text2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    guidata(hObject,str2);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#586e75&#34;&gt;% display data that stored in text1 in MATLAB command line&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#b58900&#34;&gt;disp&lt;/span&gt;(guidata(text1))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#719e07&#34;&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;4-run-script--test&#34;&gt;4. Run script &amp;amp; test&lt;/h3&gt;
+&lt;p&gt;สรุป code&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;function&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;EP3_GUI&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;%% funciton creates 2 windows for throwning a value&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;% first window&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;f1 = figure(&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;Position&amp;#39;&lt;/span&gt;,[&lt;span style=&#34;color:#2aa198&#34;&gt;100&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;100&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;400&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;400&lt;/span&gt;],&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;Units&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;pixel&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;Tag&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;GUI1&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;Toolbar&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;none&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;Menubar&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;none&amp;#39;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;% add a send button&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;send1 = uicontrol(f1,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;style&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;pushbutton&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;String&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;send&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;Units&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;pixel&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;Position&amp;#39;&lt;/span&gt;,[&lt;span style=&#34;color:#2aa198&#34;&gt;100&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;100&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;200&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;30&lt;/span&gt;]);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;% add a text box&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;text1 = uicontrol(f1,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;style&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;edit&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;String&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;Units&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;pixel&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;Position&amp;#39;&lt;/span&gt;,[&lt;span style=&#34;color:#2aa198&#34;&gt;100&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;300&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;200&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;30&lt;/span&gt;]);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;% second window&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;f2 = figure(&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;Position&amp;#39;&lt;/span&gt;,[&lt;span style=&#34;color:#2aa198&#34;&gt;600&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;100&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;400&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;400&lt;/span&gt;],&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;Units&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;pixel&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;Tag&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;GUI2&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;Toolbar&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;none&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;Menubar&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;none&amp;#39;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;% add a send button&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;send2 = uicontrol(f2,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;style&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;pushbutton&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;String&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;send&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;Units&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;pixel&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;Position&amp;#39;&lt;/span&gt;,[&lt;span style=&#34;color:#2aa198&#34;&gt;100&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;100&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;200&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;30&lt;/span&gt;]);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;% add a text box&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;text2 = uicontrol(f2,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;style&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;edit&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;String&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;Units&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;pixel&amp;#39;&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;Position&amp;#39;&lt;/span&gt;,[&lt;span style=&#34;color:#2aa198&#34;&gt;100&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;300&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;200&lt;/span&gt;,&lt;span style=&#34;color:#2aa198&#34;&gt;30&lt;/span&gt;]);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;% set Callback_function to handle function which created by adding @&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;send1.Callback = @sendTextFX1;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;send2.Callback = @sendTextFX2;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;    function&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;sendTextFX1&lt;/span&gt;(hObject,eventdata,handles)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#586e75&#34;&gt;%(hObject,eventdata,handles) must be preserved due to handle function by @&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#586e75&#34;&gt;% get value&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        str1 = get(text1,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;String&amp;#39;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#586e75&#34;&gt;% send value&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        set(text2,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;String&amp;#39;&lt;/span&gt;,str1);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#586e75&#34;&gt;% store str1 in object in hOject which text1&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        guidata(hObject,str1);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#719e07&#34;&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;    function&lt;/span&gt; &lt;span style=&#34;color:#268bd2&#34;&gt;sendTextFX2&lt;/span&gt;(hObject,eventdata,handles)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#586e75&#34;&gt;% get value&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        str2 = get(text2,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;String&amp;#39;&lt;/span&gt;);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#586e75&#34;&gt;% send value&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        set(text1,&lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;String&amp;#39;&lt;/span&gt;,str2);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#586e75&#34;&gt;% store str2 in object in hOject which is text2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        guidata(hObject,str2);
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#586e75&#34;&gt;% display data that stored in text1 in MATLAB command line&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#b58900&#34;&gt;disp&lt;/span&gt;(guidata(text1))
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#719e07&#34;&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;พิมพ์ EP3_GUI เพื่อเรียกใช้ function ใน MATLAB command line จะเห็นว่าเมื่อรันแล้วจะปรากฎหน้าต่างขึ้นมา 2 อัน พอพิมพ์กล่องข้อความหนึ่ง พอกด send ค่าในข้อความก็จะถูกส่งไปอีกกล่องข้อความนึง
+สังเกตุว่าเมื่อรัน function จะไม่เจอ variable แม้แต่ตัวเดียวใน workspace เนื่องจากเรารัน function ไม่ใช่ script&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;ทดสอบด้วย MATLAB 2016b&lt;/em&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>structure อีกรูปแบบหนึ่งในการเก็บข้อมูล</title>
+        <link>/structure-%E0%B8%AD%E0%B8%B5%E0%B8%81%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%AB%E0%B8%99%E0%B8%B6%E0%B9%88%E0%B8%87%E0%B9%83%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%81%E0%B9%87%E0%B8%9A%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5/</link>
+        <pubDate>Mon, 11 May 2020 00:00:00 +0000</pubDate>
+        
+        <guid>/structure-%E0%B8%AD%E0%B8%B5%E0%B8%81%E0%B8%A3%E0%B8%B9%E0%B8%9B%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%AB%E0%B8%99%E0%B8%B6%E0%B9%88%E0%B8%87%E0%B9%83%E0%B8%99%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B9%80%E0%B8%81%E0%B9%87%E0%B8%9A%E0%B8%82%E0%B9%89%E0%B8%AD%E0%B8%A1%E0%B8%B9%E0%B8%A5/</guid>
+        <description>&lt;p&gt;หลายๆ คนคงจะคุ้นเคยกับการใช้ vector array กับ cell array เป็นอย่างดีแล้ว มีอีกตัวนึงที่อยากให้รู้จัก และใช้กันแพร่หลายในการเก็บตัวแปรต่างๆ ซึ่งตัวนั้นก็คือ structure ถ้าบอกว่า structure ก็คือ object class แบบนึงของ MATLAB ก็คงไม่ผิดนัก ข้อดีของการเก็บข้อมูลแบบนี้ก็คือ เก็บได้ข้อมูลได้หลายประเภทโดยใช้ field ในการกำหนดหัวข้อคอลัมภ์&lt;/p&gt;
+&lt;p&gt;ตัวอย่างการใช้งาน&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;x = [&lt;span style=&#34;color:#2aa198&#34;&gt;1&lt;/span&gt;:&lt;span style=&#34;color:#2aa198&#34;&gt;1E6&lt;/span&gt;];
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;beam.posx = x;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;beam.unitx = &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;mm&amp;#39;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;จากตัวอย่างข้างต้นเราสร้าง&lt;/p&gt;
+&lt;p&gt;structure ที่มีชื่อว่า beam โดยมี field 2 field ชื่อ posx และ unitx โดย filed posx เก็บค่าชนิด vector array ส่วน field unitx เก็บค่าชนิด cell&lt;/p&gt;
+&lt;p&gt;ถ้าเรามี 2 object beam เราก็สามารถนำมาสร้างเป็น structure array ได้คล้ายๆ cell array&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;% first &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;x1 = [&lt;span style=&#34;color:#2aa198&#34;&gt;1&lt;/span&gt;:&lt;span style=&#34;color:#2aa198&#34;&gt;1E6&lt;/span&gt;];
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;beam(&lt;span style=&#34;color:#2aa198&#34;&gt;1&lt;/span&gt;).posx = x1;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;beam(&lt;span style=&#34;color:#2aa198&#34;&gt;1&lt;/span&gt;).unitx = &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;mm&amp;#39;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#586e75&#34;&gt;% second&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;x2 = [&lt;span style=&#34;color:#2aa198&#34;&gt;1&lt;/span&gt;:&lt;span style=&#34;color:#2aa198&#34;&gt;1E3&lt;/span&gt;];
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;beam(&lt;span style=&#34;color:#2aa198&#34;&gt;2&lt;/span&gt;).posx = x2;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;beam(&lt;span style=&#34;color:#2aa198&#34;&gt;2&lt;/span&gt;).unitx = &lt;span style=&#34;color:#2aa198&#34;&gt;&amp;#39;cm&amp;#39;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;ถ้าทำ operate แบบ loop ก็ใช้ structfun ตามที่ blog ก่อนเคยเกริ่นไว้ก่อนหน้านี้
+นอกจากนี้ มี function อื่นที่ใช้ร่วมกับ structure เพื่อดึงข้อมูล เช่น fieldname เพื่อดึงว่ามี fieldname อะไรบ้าง setfield เป็นการ set ค่าให้ structure ของ field ที่กำหนด&lt;/p&gt;
+&lt;p&gt;นอกจากนี้ยังมี function อื่นๆที่เอาไว้ใช้งาน ถ้ามองในมุมมองของ object class fieldname ก็เปรียบเสมือนเป็น properties ของ obj class structure นั่นเอง&lt;/p&gt;
+&lt;p&gt;เนื่องจากตัว structure สามารถเก็บข้อมูลได้หลากหลาย แยกได้ตาม field ดังนั้นมันมักจะถูกใช้เก็บงานที่มาจาก GUI เพราะส่วนใหญ่ข้อมูล inquiry input เดิมๆ แล้วเวลา share ข้อมูลระหว่าง GUI ใน app เดียวกัน ก็ส่งแค่ stureture array อันเดียวก็จะได้รับข้อมูลทั้งหมด&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>ฟังก์ชันบน array แบบไม่วน loop</title>
+        <link>/%E0%B8%9F%E0%B8%B1%E0%B8%87%E0%B8%81%E0%B9%8C%E0%B8%8A%E0%B8%B1%E0%B8%99%E0%B8%9A%E0%B8%99-array-%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B8%A7%E0%B8%99-loop/</link>
+        <pubDate>Sun, 10 May 2020 00:00:00 +0000</pubDate>
+        
+        <guid>/%E0%B8%9F%E0%B8%B1%E0%B8%87%E0%B8%81%E0%B9%8C%E0%B8%8A%E0%B8%B1%E0%B8%99%E0%B8%9A%E0%B8%99-array-%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B9%84%E0%B8%A1%E0%B9%88%E0%B8%A7%E0%B8%99-loop/</guid>
+        <description>&lt;h2 id=&#34;ทำซำแบบไมใช-loop&#34;&gt;ทำซ้ำแบบไม่ใช้ loop&lt;/h2&gt;
+&lt;p&gt;โดยปกติ เราจะใช้ทำ operate บน vector array สักอันเรา เรามักจะใช้การวนลูป เช่น for loop โดยในแต่ละ loop จะ operate ตามแต่ตัวของ array โดยใช้ index เป็นเปลียนค่าเมื่อต้องการวน loop  ใหม่&lt;/p&gt;
+&lt;p&gt;ตัวอย่างเช่น ถ้าจะให้ vertor x ในแต่ละ index มีค่ายกกำลังสอง ถ้าเขียนแบบ loop ก็จะเขียนได้ว่า&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;x = [&lt;span style=&#34;color:#2aa198&#34;&gt;1&lt;/span&gt;:&lt;span style=&#34;color:#2aa198&#34;&gt;10&lt;/span&gt;];
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;for&lt;/span&gt; &lt;span style=&#34;color:#b58900&#34;&gt;i&lt;/span&gt;=&lt;span style=&#34;color:#2aa198&#34;&gt;1&lt;/span&gt;:&lt;span style=&#34;color:#2aa198&#34;&gt;10&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  result(&lt;span style=&#34;color:#b58900&#34;&gt;i&lt;/span&gt;) = x(&lt;span style=&#34;color:#b58900&#34;&gt;i&lt;/span&gt;)&lt;span style=&#34;color:#719e07&#34;&gt;.^&lt;/span&gt;&lt;span style=&#34;color:#2aa198&#34;&gt;2&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;end&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;!-- raw HTML omitted --&gt;
+&lt;p&gt;แต่ถ้าไม่อยากเขียน loop แบบนี้ จะสามารถทำอย่างไรได้บ้าง คำตอบก็คือ มี built-in function ใน MATLAB ในตระกูล fun เช่น arrayfun, cellfun, structfun ที่ทำหน้าที่ให้การ apply function ลงในแต่ละ index ของตัวแปรต้น ถ้าตัวแปรต้นเป็นชนิด array เราก็เลือก function arrayfun แต่ถ้าตัวแปรต้นเป็น array cell ก็ใช้เลือกใช้ cellfun หรือเป็น structure(เป็น built-in class ปกติใช้เก็บข้อมูลที่มีความซับซ้อนและหลากหลาย) ก็เลือกใช้ structfun&lt;/p&gt;
+&lt;p&gt;ถ้าลองเขียนโค้ดใหม่เพื่อให้ได้ผลลัพธ์ตามตัวอย่างข้างบน จะได้&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;x = [&lt;span style=&#34;color:#2aa198&#34;&gt;1&lt;/span&gt;:&lt;span style=&#34;color:#2aa198&#34;&gt;10&lt;/span&gt;];
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;result  = arrayfun(@(u) u^&lt;span style=&#34;color:#2aa198&#34;&gt;2&lt;/span&gt;, x)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;ถ้าเรามีจำนวนตัวแปรต้น array เพิ่มหนึ่งตัวก็สามารถเขียนได้ตามตัวอย่าง&lt;/p&gt;
+&lt;p&gt;ตัวอย่าง&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;x = [&lt;span style=&#34;color:#2aa198&#34;&gt;1&lt;/span&gt;:&lt;span style=&#34;color:#2aa198&#34;&gt;10&lt;/span&gt;];
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;y = [&lt;span style=&#34;color:#2aa198&#34;&gt;10&lt;/span&gt;:&lt;span style=&#34;color:#2aa198&#34;&gt;1&lt;/span&gt;];
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;result = arrayfun(@(u,v) u^&lt;span style=&#34;color:#2aa198&#34;&gt;2&lt;/span&gt;&lt;span style=&#34;color:#719e07&#34;&gt;+&lt;/span&gt;v^&lt;span style=&#34;color:#2aa198&#34;&gt;2&lt;/span&gt;, x,y)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;โดยปกติการเรียกใช้ function จะใช้แบบ anomynous (เช่น @(u,v) u^2+v^2)
+หรือถ้า function มันยาวก็เขียน function ใหม่เขียนมาภายใน script เดียวกัน หรือจะเขียนแยกอีก .m ไฟล์ก็ได้ (อย่าลืม add path)&lt;/p&gt;
+&lt;p&gt;บางครั้งผลลัพธ์ที่ได้ไม่สามารถเขียนในรูป Uniform ได้ มันจะทักเรา&lt;/p&gt;
+&lt;p&gt;ถ้าเรา apply function แล้วได้ผลลัพธ์ที่ไม่ Uniform เช่นถ้าผลลัพธ์คือ&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-MATLAB&#34; data-lang=&#34;MATLAB&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;result(&lt;span style=&#34;color:#2aa198&#34;&gt;1&lt;/span&gt;) = &lt;span style=&#34;color:#2aa198&#34;&gt;1&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;result(&lt;span style=&#34;color:#2aa198&#34;&gt;2&lt;/span&gt;) = ‘City’;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;result(&lt;span style=&#34;color:#2aa198&#34;&gt;3&lt;/span&gt;) = &lt;span style=&#34;color:#2aa198&#34;&gt;1E2&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;ให้เราใส่ ให้ใส่ ‘UniformOutput’ เป็น 0 หรือ false&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#93a1a1;background-color:#002b36;-moz-tab-size:1;-o-tab-size:1;tab-size:1;&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;arrayfun(func, x,  ‘UniformOutput’, 0)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;ผลลัพธ์ที่ได้จะอยู่ในรูปแบบ cell array ที่มี output ในแต่ละ cell array นั้นๆ&lt;/p&gt;
+&lt;p&gt;ฉะนั้นถ้าเอาตัวอย่างแรกมาใส่ ‘UniformOutput’ เป็น 0&lt;/p&gt;
+&lt;p&gt;ความแตกต่างของผลลัพธ์ระหว่างการใส่ค่า ‘UniformOutput’ เป็น 0 กับ 1 คือ&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;สำหรับ ‘UniformOutput’ 0&lt;br&gt;
+y{1} = ‘1’, y{2}=‘4’, y{3} = ‘9’ .. ; cell array ขนาด 1x10&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;สำหรับ ‘UniformOutput’ 1&lt;br&gt;
+y(1)=1, y(2)=4, y(3)=9 .. ; vector array ขนาด 1x10&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;ข้อดีของการใช้ funtion ตระกูล fun จะมีการคำนวณที่เร็วขึ้นเมื่อใช้งานแบบ paralell computating นั่นหมายความว่าเราสามารถวน loop ได้พร้อมๆ กัน
+โดยปกติการใช้งานทั่วๆ ไปไม่ได้ไปถึงขัั้นนั้นกันหรอก อย่างน้อยมันก็สะดวกเวลาเขียนโค้ดเพราะไม่ต้องมาเสียเวลานั่งวน loop&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
