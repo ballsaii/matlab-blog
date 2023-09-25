@@ -9,7 +9,7 @@ paginate = 5
 summaryLength = 30
 # optionally override the site's footer with custom copyright text
 copyright = "Except where otherwise noted, content on this site is licensed under a [Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/).  <br />  Blog [Policy](https://www.termsfeed.com/live/63c43686-c465-4d13-bd81-24c77d342b85) "
-theme: minima
+theme = minima
 #googleAnalytics = "G-YCENEYG2N0"
 #disqusShortname = "XYW"
 # pygmentsUseClasses = true
