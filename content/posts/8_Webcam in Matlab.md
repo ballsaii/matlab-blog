@@ -1,7 +1,7 @@
 ---
 author: "BBeaw"
 date: 2020-06-12
-title: Webcam in Matlab 
+title: Webcam in MATLAB 
 categories: [matlab]
 tags: [webcam,visualization]
 draft: false
