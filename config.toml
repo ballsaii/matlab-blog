@@ -3,6 +3,8 @@
 #baseURL= "https://bbeawblog.onrender.com/"
 languageCode = "en-us"
 title = "Bbeaw and binary"
+
+theme = "minima"
 # number of posts to show on home/category/tag pages (Default: 10)
 paginate = 5
 # number of words to use for summary on home/category/tag pages (Default: 70)
@@ -15,6 +17,7 @@ copyright = "Except where otherwise noted, content on this site is licensed unde
 # pygmentsUseClasses = true
 enableGitInfo = true
 comments = false
+
 
 [taxonomies]
   category = "categories"
