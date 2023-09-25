@@ -46,6 +46,6 @@ t.HorizontalAlignment = 'center';
 ```MATLAB
 saveas(f,'EP10_liverpool_addtext.png')
 ```
-![ผลลัพธ์](/static/mfiles/EP10_liverpool_addtext.png)
+![ผลลัพธ์](/mfiles/EP10_liverpool_addtext.png)
 
 

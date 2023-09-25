@@ -1,3 +1,13 @@
-[submodule "themes/minima"]
-	path = themes/minima
-	url = https://github.com/jekyll/minima
+[submodule "themes/gists"]
+	path = themes/gists
+	url = https://github.com/dmachard/hugo-theme-gists.git
+[submodule "themes/hugo-PaperMod"]
+	path = themes/hugo-PaperMod
+	url = https://github.com/adityatelange/hugo-PaperMod
+
+[submodule "themes/hugo_theme_pickles"]
+	path = themes/hugo_theme_pickles
+	url = https://github.com/mismith0227/hugo_theme_pickles
+[submodule "themes/hugo-theme-mini"]
+	path = themes/hugo-theme-mini
+	url = https://github.com/nodejh/hugo-theme-mini
