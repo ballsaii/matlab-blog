@@ -3,7 +3,7 @@
 #baseURL= "https://bbeawblog.onrender.com/"
 languageCode = "en-us"
 title = "Bbeaw and binary"
-theme = "clarity"
+theme = "hugo-clarity"
 # number of posts to show on home/category/tag pages (Default: 10)
 paginate = 5
 # number of words to use for summary on home/category/tag pages (Default: 70)
@@ -39,10 +39,6 @@ comments = false
 
 #[menu]
 # Link
-[[menu.sidebar]]
-  name = "DisR"
-  url = "https://github.com/ballsaii/DisR"
-#
 
 [[menu.navbar]]
   name = "MATLAB"
