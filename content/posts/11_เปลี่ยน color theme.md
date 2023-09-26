@@ -13,7 +13,7 @@ draft: false
 ## เปลี่ยนง่ายๆ ที่ Perferences
 วิธีการง่ายที่สุดไปเปลียนที่ Perferences -> Colors แล้วค่อยๆ เลือกที่ละสี ดูตามรูปเลย
 
-![EP11_colortheme.jpeg](https://flic.kr/p/2p5oC1v)
+![EP11_colorthemebae95b89b87478f1.jpeg](https://cdn.pic.in.th/file/picinth/EP11_colorthemebae95b89b87478f1.jpeg)
 
 ## ใช้ code เปลี่ยนโดย matlab-schemer
 

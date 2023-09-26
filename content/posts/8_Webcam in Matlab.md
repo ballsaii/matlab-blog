@@ -96,4 +96,5 @@ image(b);
 
 ทดสอบๆ 
 
-![snapshot_me](/mfiles/EP8_preview.jpg)
+![EP8_preview.jpeg](https://cdn.pic.in.th/file/picinth/EP8_preview.jpeg)
+
