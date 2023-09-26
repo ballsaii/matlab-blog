@@ -24,7 +24,7 @@ series = "series"
 home = ["HTML", "RSS", "JSON"]
 
 # number of posts to show on home/category/tag pages (Default: 10)
-paginate = 5
+# paginate = 5
 # number of words to use for summary on home/category/tag pages (Default: 70)
 # summaryLength = 30
 
