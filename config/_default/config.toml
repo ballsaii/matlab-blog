@@ -3,45 +3,41 @@
 #baseURL= "https://bbeawblog.onrender.com/"
 languageCode = "en-us"
 title = "Bbeaw and binary"
-
 theme = "hugo-clarity"
+copyright = "Copyright @ 2023"
+# canonifyurls = true
+# disqusShortname = ""
 
-# number of posts to show on home/category/tag pages (Default: 10)
-paginate = 5
-# number of words to use for summary on home/category/tag pages (Default: 70)
-summaryLength = 30
+#DefaultContentLanguage = "en"
+# [languages]
+# config/_default/languages.toml
 
-
-#googleAnalytics = "G-YCENEYG2N0"
-#disqusShortname = "XYW"
-# pygmentsUseClasses = true
-enableGitInfo = true
-comments = false
-
+# [menus]
+# config/_default/menus/menu.xx.toml
 
 [taxonomies]
 category = "categories"
 tag = "tags"
 series = "series"
 
-[markup]
-  [markup.highlight]
-    codeFences = true
-    guessSyntax = true
-    hl_Lines = ""
-    lineNoStart = 1
-    lineNos = false
-    lineNumbersInTable = false
-    noClasses = true
-    #style = "solarized-dark"
-    tabWidth = 1
+[outputs]
+home = ["HTML", "RSS", "JSON"]
+
+# number of posts to show on home/category/tag pages (Default: 10)
+paginate = 5
+# number of words to use for summary on home/category/tag pages (Default: 70)
+summaryLength = 30
+
+#googleAnalytics = "G-YCENEYG2N0"
+#disqusShortname = "XYW"
+# pygmentsUseClasses = true
+#enableGitInfo = true
+#comments = false
 
 [permalinks]
   posts = "/:title/"
   page = "/:day/:month/:year/:title/"
 
-# Theme variables
-#
 [params]
   # Site author
   author = "chaipattana saisa-ard"
@@ -68,8 +64,8 @@ series = "series"
   # required for your site in the European Union. Set the parameter below to a
   # page where the user can get more information about cookies, either on your
   # site or externally, for example:
-  #cookie_consent_info_url = "/cookie-information/"
-  #cookie_consent_info_url = "http://cookiesandyou.com"
+  # cookie_consent_info_url = "/cookie-information/"
+  # cookie_consent_info_url = "http://cookiesandyou.com"
 
   # show sharing icons on pages/posts (default: true)
   sharingicons = true
@@ -81,22 +77,7 @@ series = "series"
   # Useful if you're using a CDN or other host where you can't control cache headers
   #disable_sri = false
 
-  [params.sidebar]
-    # Optional about block for sidebar (can be Markdown)
-  about = "Other side of beam physicist:>> a coding writer, MATLAB langauge pros, technologist, && color theme only solarized!!" 
-  photo = "![mypic](/profile_picture.jpg)"
-    # How many posts to show on the sidebar (Default: 5)
+  # How many posts to show on the sidebar (Default: 5)
   num_recent_posts = 5
 
 
-# Default content language for Hugo 0.17's multilingual support (default is "en")
-# See: https://github.com/spf13/hugo/blob/master/docs/content/content/multilingual.md
-#DefaultContentLanguage = "en"
-
-# Languages to render
-# [languages.en]
-#[languages.bg]
-  # Bulgarian date format is dd.mm.yyyy
-  #date_format = "02.01.2006"
-
-# vim: ts=2 sw=2 et
