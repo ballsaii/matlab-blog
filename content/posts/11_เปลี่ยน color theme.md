@@ -14,10 +14,8 @@ draft: false
 วิธีการง่ายที่สุดไปเปลียนที่ Perferences -> Colors แล้วค่อยๆ เลือกที่ละสี ดูตามรูปเลย
 
 ![image](https://user-images.githubusercontent.com/5889006/190859441-141b5f81-8483-40d2-bd96-ebf85616a46d.png)
-
-# Hugo Theme Stack
-
-<img align="right" width="150" alt="logo" src="https://user-images.githubusercontent.com/5889006/190859553-5b229b4f-c476-4cbd-928f-890f5265ca4c.png">
+![image](https://github.com/ballsaii/matlab-blog/blob/d42209258a261261d727dcec4457ae08fa45c707/static/mfiles/EP11_colortheme.jpg)
+![EP11_colortheme.jpeg](https://cdn.pic.in.th/file/picinth/EP11_colortheme.jpeg)
 
 ## ใช้ code เปลี่ยนโดย matlab-schemer
 
