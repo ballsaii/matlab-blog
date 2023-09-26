@@ -33,7 +33,7 @@ series = "series"
     lineNos = false
     lineNumbersInTable = false
     noClasses = true
-    #style = "solarized-dark"
+    style = "solarized-dark"
     tabWidth = 1
 
 [permalinks]
