@@ -5,12 +5,12 @@ languageCode = "en-us"
 title = "Bbeaw and binary"
 
 theme = "hugo-clarity"
+
 # number of posts to show on home/category/tag pages (Default: 10)
 paginate = 5
 # number of words to use for summary on home/category/tag pages (Default: 70)
 summaryLength = 30
-# optionally override the site's footer with custom copyright text
-copyright = "Except where otherwise noted, content on this site is licensed under a [Creative Commons Attribution 4.0 International license](https://creativecommons.org/licenses/by-sa/4.0/).  <br />  Blog [Policy](https://www.termsfeed.com/live/63c43686-c465-4d13-bd81-24c77d342b85) "
+
 
 #googleAnalytics = "G-YCENEYG2N0"
 #disqusShortname = "XYW"
@@ -20,8 +20,9 @@ comments = false
 
 
 [taxonomies]
-  category = "categories"
-  tag = "tags"
+category = "categories"
+tag = "tags"
+series = "series"
 
 [markup]
   [markup.highlight]
@@ -32,19 +33,12 @@ comments = false
     lineNos = false
     lineNumbersInTable = false
     noClasses = true
-    style = "solarized-dark"
+    #style = "solarized-dark"
     tabWidth = 1
 
 [permalinks]
   posts = "/:title/"
   page = "/:day/:month/:year/:title/"
-
-#[menu]
-# Link
-
-[[menu.navbar]]
-  name = "MATLAB"
-  url = "/categories/matlab/"
 
 # Theme variables
 #
