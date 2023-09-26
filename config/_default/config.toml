@@ -4,7 +4,7 @@
 languageCode = "en-us"
 title = "Bbeaw and binary"
 theme = "hugo-clarity"
-copyright = "Copyright @ 2023"
+copyright = "Copyright @ 2023 ![GitHub](https://img.shields.io/github/license/ballsaii/matlab-blog)"
 # canonifyurls = true
 # disqusShortname = ""
 
